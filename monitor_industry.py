@@ -41,9 +41,13 @@ def get_data(client, credentials, hours=1, minutes=0):
 
 
 def main():
+    recent_delays = {c: [] for c in clients}
+    last_delay = {c: 0 for c in clients}
+
     while True:
         credentials = get_credentials(clients)
         print(f'Hora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
+
         for client in clients:
             delay_found = False
             try:
@@ -55,6 +59,7 @@ def main():
             if response == {}:
                 print(f"{client_names[client]} sin conexión")
                 continue
+            
 
             for device, logs in response.items():
                 
@@ -65,13 +70,20 @@ def main():
                     delay = str(time_since_log-timedelta(minutes=10)).split('.')[0]
                     print(f'{client_names[client]} {device} atrasado por {delay}')
                     delay_found = True
+
+                    if (datetime.now() - last_delay[client]) > timedelta(minutes=11):
+                        recent_delays[client].append(datetime.now())
+
+                    last_delay[client] = datetime.now()
                                 
                 log = logs[0]["log"]
                 if not log == "":
                     print(f"{client_names[client]} {device} log: {log}")
+            
+            recent_delays[client] = [r for r in recent_delays[client] if (datetime.now() - r) < timedelta(hours=24)]
 
             if not delay_found:
-                print(f'{client_names[client]} sin retrasos')
+                print(f'{client_names[client]} sin retrasos ({len(recent_delays[client])} en las últimas 24h)')
 
         print("\n")
         time.sleep(600)
