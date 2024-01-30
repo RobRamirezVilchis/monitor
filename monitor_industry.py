@@ -42,7 +42,7 @@ def get_data(client, credentials, hours=1, minutes=0):
 
 def main():
     recent_delays = {c: [] for c in clients}
-    last_delay = {c: 0 for c in clients}
+    last_delay = {c: datetime.min for c in clients}
 
     while True:
         credentials = get_credentials(clients)
@@ -71,6 +71,7 @@ def main():
                     print(f'{client_names[client]} {device} atrasado por {delay}')
                     delay_found = True
 
+                    
                     if (datetime.now() - last_delay[client]) > timedelta(minutes=11):
                         recent_delays[client].append(datetime.now())
 
