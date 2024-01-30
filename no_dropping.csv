@@ -1,186 +1,209 @@
 ,Unidad,Fecha_subida,Timestamp,Error,Log
 0,2003,2024-01-30 12:48:22,2024-01-30 12:48:00,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
 2,2003,2024-01-30 12:48:25,2024-01-30 12:48:14,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-4,2006,2024-01-30 12:20:26,2024-01-30 12:20:23,False,{'log': 'DISCONNECTED cameras: 0 1 2'}
-5,2006,2024-01-30 12:20:33,2024-01-30 12:20:30,False,{'log': 'CONNECTED cameras: 0 1 2'}
-6,2006,2024-01-30 12:20:44,2024-01-30 12:20:42,True,{'log': 'Restarting. Execution number: 43 Check log for details.\n\nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-8,2006,2024-01-30 12:32:33,2024-01-30 12:32:01,False,{'log': 'NO STORAGE DEVICE FOUND'}
-10,2006,2024-01-30 12:32:35,2024-01-30 12:32:07,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-11,2006,2024-01-30 12:32:36,2024-01-30 12:32:25,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_02/GstURIDecodeBin:subbin_uridecodebin_02/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-13,2006,2024-01-30 12:33:59,2024-01-30 12:33:57,False,{'log': 'Source id 0 has been missing for 100 batches '}
-16,6045,2024-01-30 12:21:01,2024-01-30 12:20:58,False,{'log': 'Source id 0 has been missing for 100 batches '}
-17,6101,2024-01-30 13:12:41,2024-01-30 10:25:35,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-19,6101,2024-01-30 13:12:44,2024-01-30 10:51:06,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-20,6101,2024-01-30 13:12:46,2024-01-30 10:51:12,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-22,6101,2024-01-30 13:12:49,2024-01-30 13:12:31,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-24,6101,2024-01-30 13:12:52,2024-01-30 13:12:37,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-25,6101,2024-01-30 13:12:55,2024-01-30 13:12:52,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-27,6101,2024-01-30 13:14:37,2024-01-30 13:14:29,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-29,6101,2024-01-30 13:14:48,2024-01-30 13:14:34,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-30,6101,2024-01-30 13:15:24,2024-01-30 13:14:34,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-31,6101,2024-01-30 13:15:26,2024-01-30 13:15:17,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-32,6101,2024-01-30 13:15:27,2024-01-30 13:15:22,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-34,6101,2024-01-30 13:16:11,2024-01-30 13:16:03,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-35,6101,2024-01-30 13:16:12,2024-01-30 13:16:08,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-37,6101,2024-01-30 13:16:55,2024-01-30 13:16:47,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-38,6101,2024-01-30 13:16:57,2024-01-30 13:16:52,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-40,6101,2024-01-30 13:17:41,2024-01-30 13:17:33,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-42,6101,2024-01-30 13:17:45,2024-01-30 13:17:38,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-44,6101,2024-01-30 13:18:39,2024-01-30 13:18:30,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-46,6101,2024-01-30 13:18:43,2024-01-30 13:18:35,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-47,6101,2024-01-30 13:19:26,2024-01-30 13:19:18,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-49,6101,2024-01-30 13:19:30,2024-01-30 13:19:23,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-51,6101,2024-01-30 13:20:15,2024-01-30 13:20:06,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
-52,6101,2024-01-30 13:20:17,2024-01-30 13:20:11,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-56,8400,2024-01-30 13:19:22,2024-01-30 13:03:50,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-57,8400,2024-01-30 13:19:25,2024-01-30 13:04:04,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-61,8413,2024-01-30 12:22:10,2024-01-30 12:22:06,False,{'log': 'DISCONNECTED cameras: 0 1 2'}
-62,8413,2024-01-30 12:24:31,2024-01-30 12:24:28,True,"{'log': ""Restarting. Execution number: 194 Check log for details.\n\n[ERROR] main: Parser Json config failed. Trying with backup json... \n[ERROR] aivat_parser_pipeline: At least a source should be enabled \n[ERROR] main: Backup json couldn't be parsed ""}"
-63,8413,2024-01-30 12:27:07,2024-01-30 12:27:06,False,{'log': 'DISCONNECTED cameras: 0 1 2'}
-64,8413,2024-01-30 12:29:40,2024-01-30 12:29:38,True,"{'log': ""Restarting. Execution number: 224 Check log for details.\n\n[ERROR] main: Parser Json config failed. Trying with backup json... \n[ERROR] aivat_parser_pipeline: At least a source should be enabled \n[ERROR] main: Backup json couldn't be parsed ""}"
-65,8413,2024-01-30 12:32:07,2024-01-30 12:32:06,False,{'log': 'DISCONNECTED cameras: 0 1 2'}
-66,8413,2024-01-30 12:32:15,2024-01-30 12:32:13,False,{'log': 'CONNECTED cameras: 0 1 2'}
-68,8413,2024-01-30 12:38:07,2024-01-30 12:37:03,False,{'log': 'Source id 0 has been missing for 100 batches '}
-69,8413,2024-01-30 12:59:30,2024-01-30 12:59:28,False,{'log': 'Source id 2 has been missing for 100 batches '}
-70,8413,2024-01-30 12:59:37,2024-01-30 12:59:36,False,{'log': 'Source id 2 reappeared after 155 misses '}
-71,8416,2024-01-30 13:06:47,2024-01-30 13:06:45,False,{'log': 'NO STORAGE DEVICE FOUND'}
-72,8417,2024-01-30 12:48:46,2024-01-30 12:46:12,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-74,8417,2024-01-30 12:48:50,2024-01-30 12:46:26,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-76,8417,2024-01-30 12:48:59,2024-01-30 12:47:14,False,{'log': 'Source id 1 has been missing for 100 batches '}
-78,8418,2024-01-30 13:05:01,2024-01-30 13:04:58,False,{'log': 'Source id 2 has been missing for 100 batches '}
-79,8418,2024-01-30 13:09:37,2024-01-30 13:09:33,False,{'log': 'Source id 2 reappeared after 6572 misses '}
-80,8418,2024-01-30 13:12:07,2024-01-30 13:12:05,False,{'log': 'Source id 2 has been missing for 100 batches '}
-81,8418,2024-01-30 13:13:21,2024-01-30 13:13:18,False,{'log': 'Source id 2 reappeared after 1244 misses '}
-82,8419,2024-01-30 12:25:16,2024-01-30 12:21:54,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-84,8419,2024-01-30 12:25:19,2024-01-30 12:22:08,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-88,8916,2024-01-30 12:48:45,2024-01-30 12:48:26,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-89,8916,2024-01-30 12:48:46,2024-01-30 12:48:41,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-91,8917,2024-01-30 12:34:14,2024-01-30 12:32:28,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-93,8917,2024-01-30 12:34:17,2024-01-30 12:32:42,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-95,8917,2024-01-30 12:34:19,2024-01-30 12:33:25,False,{'log': 'Source id 0 has been missing for 100 batches '}
-96,9154,2024-01-30 12:58:32,2024-01-30 12:55:28,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-98,9154,2024-01-30 12:58:37,2024-01-30 12:55:43,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-100,9154,2024-01-30 12:58:43,2024-01-30 12:56:27,False,{'log': 'Source id 2 has been missing for 100 batches '}
-102,9285,2024-01-30 12:42:21,2024-01-25 14:55:34,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-103,9285,2024-01-30 12:42:24,2024-01-25 15:36:47,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-105,9285,2024-01-30 12:42:26,2024-01-25 15:37:00,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-107,9285,2024-01-30 12:42:29,2024-01-25 16:19:23,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-109,9285,2024-01-30 12:42:33,2024-01-25 16:19:36,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-112,9285,2024-01-30 12:42:38,2024-01-30 12:39:44,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-113,9285,2024-01-30 12:42:40,2024-01-30 12:39:58,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-115,9285,2024-01-30 12:43:44,2024-01-30 12:43:42,False,{'log': 'Source id 1 has been missing for 100 batches '}
-116,9285,2024-01-30 12:43:57,2024-01-30 12:43:54,False,{'log': 'Source id 1 reappeared after 264 misses '}
-239,9341,2024-01-30 12:22:24,2024-01-30 07:39:02,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
-240,9341,2024-01-30 12:22:25,2024-01-30 07:39:09,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-242,9341,2024-01-30 12:22:29,2024-01-30 07:55:47,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
-244,9341,2024-01-30 12:22:33,2024-01-30 07:55:54,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-245,9341,2024-01-30 12:22:34,2024-01-30 12:18:30,False,{'log': 'NO STORAGE DEVICE FOUND MATCHING VENDOR/MODEL'}
-246,9341,2024-01-30 12:22:36,2024-01-30 12:18:38,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-247,9345,2024-01-30 12:22:03,2024-01-30 12:19:35,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-249,9345,2024-01-30 12:22:06,2024-01-30 12:19:48,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-251,9345,2024-01-30 12:22:09,2024-01-30 12:21:30,False,{'log': 'FORMATTING PARTITION /dev/sda1 TOO MANY TRANSFER ERRORS'}
-254,9352,2024-01-30 13:04:24,2024-01-30 13:02:13,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-255,9352,2024-01-30 13:04:28,2024-01-30 13:02:28,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-257,9352,2024-01-30 13:04:31,2024-01-30 13:03:17,False,{'log': 'Source id 0 has been missing for 100 batches '}
-258,9352,2024-01-30 13:04:32,2024-01-30 13:03:21,False,{'log': 'Source id 0 reappeared after 159 misses '}
-259,9357,2024-01-30 13:03:46,2024-01-30 13:03:19,False,{'log': 'NO STORAGE DEVICE FOUND'}
-261,9357,2024-01-30 13:03:49,2024-01-30 13:03:28,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-262,9357,2024-01-30 13:03:51,2024-01-30 13:03:42,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-264,9357,2024-01-30 13:04:19,2024-01-30 13:04:17,False,{'log': 'Source id 0 has been missing for 100 batches '}
-265,9357,2024-01-30 13:04:21,2024-01-30 13:04:17,False,{'log': 'Source id 1 has been missing for 100 batches '}
-266,9357,2024-01-30 13:04:23,2024-01-30 13:04:18,False,{'log': 'Source id 0 reappeared after 111 misses '}
-268,9504,2024-01-30 13:05:55,2024-01-30 13:03:36,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-269,9504,2024-01-30 13:05:58,2024-01-30 13:03:49,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-272,9510,2024-01-30 13:17:11,2024-01-30 13:16:41,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-273,9510,2024-01-30 13:17:13,2024-01-30 13:16:56,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-275,9510,2024-01-30 13:17:54,2024-01-30 13:17:52,False,{'log': 'Source id 0 has been missing for 100 batches '}
-276,9510,2024-01-30 13:17:55,2024-01-30 13:17:53,False,{'log': 'Source id 0 reappeared after 109 misses '}
-277,9522,2024-01-30 12:38:44,2024-01-30 12:13:59,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-279,9522,2024-01-30 12:38:47,2024-01-30 12:14:14,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-282,9522,2024-01-30 12:38:54,2024-01-30 12:27:16,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-283,9522,2024-01-30 12:38:56,2024-01-30 12:27:30,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-285,9522,2024-01-30 13:15:37,2024-01-30 13:10:42,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-287,9522,2024-01-30 13:15:41,2024-01-30 13:10:57,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-289,9529,2024-01-30 12:22:31,2024-01-30 12:22:21,False,{'log': 'NO STORAGE DEVICE FOUND'}
-290,9529,2024-01-30 13:11:42,2024-01-30 13:08:46,False,{'log': 'NO STORAGE DEVICE FOUND'}
-292,9529,2024-01-30 13:11:45,2024-01-30 13:08:56,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-293,9529,2024-01-30 13:11:46,2024-01-30 13:09:09,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-295,9533,2024-01-30 13:01:56,2024-01-30 13:01:54,False,{'log': 'NO STORAGE DEVICE FOUND'}
-296,9538,2024-01-30 13:11:13,2024-01-30 11:41:49,False,{'log': 'NO STORAGE DEVICE FOUND'}
-297,9538,2024-01-30 13:12:29,2024-01-30 12:41:54,False,{'log': 'NO STORAGE DEVICE FOUND'}
-298,9539,2024-01-30 12:32:29,2024-01-30 12:25:54,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-300,9539,2024-01-30 12:32:31,2024-01-30 12:26:09,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-302,9542,2024-01-30 12:21:45,2024-01-30 12:21:42,False,{'log': 'DISCONNECTED cameras: 2'}
-303,9542,2024-01-30 12:26:45,2024-01-30 12:26:42,False,{'log': 'DISCONNECTED cameras: 2'}
-304,9542,2024-01-30 12:31:44,2024-01-30 12:31:42,False,{'log': 'DISCONNECTED cameras: 2'}
-305,9542,2024-01-30 12:36:45,2024-01-30 12:36:42,False,{'log': 'DISCONNECTED cameras: 2'}
-306,9542,2024-01-30 12:41:45,2024-01-30 12:41:42,False,{'log': 'DISCONNECTED cameras: 2'}
-307,9542,2024-01-30 12:46:45,2024-01-30 12:46:42,False,{'log': 'DISCONNECTED cameras: 2'}
-308,9542,2024-01-30 12:51:45,2024-01-30 12:51:42,False,{'log': 'DISCONNECTED cameras: 2'}
-309,9542,2024-01-30 12:56:45,2024-01-30 12:56:42,False,{'log': 'DISCONNECTED cameras: 2'}
-310,9542,2024-01-30 13:01:49,2024-01-30 13:01:42,False,{'log': 'DISCONNECTED cameras: 2'}
-311,9542,2024-01-30 13:06:45,2024-01-30 13:06:42,False,{'log': 'DISCONNECTED cameras: 2'}
-312,9542,2024-01-30 13:11:45,2024-01-30 13:11:42,False,{'log': 'DISCONNECTED cameras: 2'}
-313,9542,2024-01-30 13:16:45,2024-01-30 13:16:42,False,{'log': 'DISCONNECTED cameras: 2'}
-314,9542,2024-01-30 13:17:02,2024-01-30 13:17:00,False,{'log': 'NO STORAGE DEVICE FOUND'}
-315,9544,2024-01-30 12:23:11,2024-01-30 11:26:55,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-317,9544,2024-01-30 12:23:14,2024-01-30 11:27:09,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-320,9544,2024-01-30 12:23:30,2024-01-30 12:20:39,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-321,9544,2024-01-30 12:23:31,2024-01-30 12:20:53,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-323,9546,2024-01-30 12:48:23,2024-01-30 12:25:57,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-325,9546,2024-01-30 12:48:25,2024-01-30 12:26:12,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-327,9546,2024-01-30 12:48:39,2024-01-30 12:27:34,False,{'log': 'Source id 1 has been missing for 100 batches '}
-328,9546,2024-01-30 12:48:45,2024-01-30 12:27:55,False,{'log': 'Source id 1 has been missing for 100 batches '}
-329,9546,2024-01-30 12:48:46,2024-01-30 12:48:04,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-331,9546,2024-01-30 12:48:49,2024-01-30 12:48:20,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-333,9546,2024-01-30 12:55:05,2024-01-30 12:54:33,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-335,9546,2024-01-30 12:55:08,2024-01-30 12:54:49,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-337,9546,2024-01-30 12:55:29,2024-01-30 12:55:26,False,{'log': 'Source id 1 has been missing for 100 batches '}
-339,9547,2024-01-30 13:16:53,2024-01-30 13:14:27,False,{'log': 'NO STORAGE DEVICE FOUND'}
-340,9547,2024-01-30 13:16:55,2024-01-30 13:14:34,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-342,9547,2024-01-30 13:16:58,2024-01-30 13:14:49,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-344,9547,2024-01-30 13:17:05,2024-01-30 13:15:28,False,{'log': 'Source id 2 has been missing for 100 batches '}
-345,9548,2024-01-30 13:16:27,2024-01-30 13:14:07,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-347,9548,2024-01-30 13:16:30,2024-01-30 13:14:21,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-349,9548,2024-01-30 13:16:36,2024-01-30 13:15:02,False,{'log': 'Source id 1 has been missing for 100 batches '}
-351,9553,2024-01-30 12:33:10,2024-01-30 12:02:31,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-352,9553,2024-01-30 12:33:11,2024-01-30 12:02:45,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-354,9553,2024-01-30 12:33:14,2024-01-30 12:03:38,False,{'log': 'Source id 0 has been missing for 100 batches '}
-355,9553,2024-01-30 12:33:16,2024-01-30 12:03:39,False,{'log': 'Source id 0 reappeared after 108 misses '}
-357,9553,2024-01-30 12:33:24,2024-01-30 12:32:45,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-358,9553,2024-01-30 12:33:25,2024-01-30 12:33:00,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-360,9553,2024-01-30 12:34:06,2024-01-30 12:34:03,False,{'log': 'Source id 0 has been missing for 100 batches '}
-361,9555,2024-01-30 12:33:13,2024-01-30 12:30:29,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
-362,9555,2024-01-30 12:33:15,2024-01-30 12:30:36,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-364,9555,2024-01-30 12:33:20,2024-01-30 12:30:50,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-366,9558,2024-01-30 12:44:33,2024-01-29 18:56:58,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-367,9558,2024-01-30 12:44:56,2024-01-29 18:57:14,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-369,9558,2024-01-30 12:44:58,2024-01-29 18:57:52,False,{'log': 'Source id 0 has been missing for 100 batches '}
-370,9558,2024-01-30 12:45:00,2024-01-30 12:43:13,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-372,9558,2024-01-30 12:45:05,2024-01-30 12:43:29,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-375,9565,2024-01-30 12:29:58,2024-01-30 12:29:26,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-376,9565,2024-01-30 12:30:00,2024-01-30 12:29:40,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-378,9583,2024-01-30 12:40:34,2024-01-30 12:40:31,True,"{'log': ""No output has been read from the process's STDOUT in five minutes.\n\nNvMMLiteOpen : Block : BlockType = 261 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 261 ""}"
-380,9583,2024-01-30 12:40:51,2024-01-30 12:40:49,False,{'log': 'Source id 0 has been missing for 100 batches '}
-381,9583,2024-01-30 12:43:50,2024-01-30 12:43:47,False,{'log': 'NO STORAGE DEVICE FOUND'}
-382,9600,2024-01-30 12:20:50,2024-01-30 11:25:17,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-384,9600,2024-01-30 12:20:53,2024-01-30 11:25:31,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-386,9600,2024-01-30 12:20:56,2024-01-30 11:26:11,False,{'log': 'Source id 0 has been missing for 100 batches '}
-387,9600,2024-01-30 12:20:58,2024-01-30 11:26:14,False,{'log': 'Source id 0 reappeared after 139 misses '}
-388,9607,2024-01-30 12:20:58,2024-01-30 12:20:40,False,{'log': 'DISCONNECTED cameras: 1'}
-389,9607,2024-01-30 12:26:03,2024-01-30 12:25:40,False,{'log': 'DISCONNECTED cameras: 1'}
-390,9607,2024-01-30 12:30:58,2024-01-30 12:30:40,False,{'log': 'DISCONNECTED cameras: 1'}
-391,9607,2024-01-30 12:36:01,2024-01-30 12:35:40,False,{'log': 'DISCONNECTED cameras: 1'}
-392,9607,2024-01-30 12:40:58,2024-01-30 12:40:40,False,{'log': 'DISCONNECTED cameras: 1'}
-393,9607,2024-01-30 12:45:58,2024-01-30 12:45:40,False,{'log': 'DISCONNECTED cameras: 1'}
-394,9607,2024-01-30 12:50:58,2024-01-30 12:50:40,False,{'log': 'DISCONNECTED cameras: 1'}
-395,9607,2024-01-30 12:56:01,2024-01-30 12:55:40,False,{'log': 'DISCONNECTED cameras: 1'}
-396,9607,2024-01-30 13:00:59,2024-01-30 13:00:40,False,{'log': 'DISCONNECTED cameras: 1'}
-397,9607,2024-01-30 13:06:05,2024-01-30 13:05:40,False,{'log': 'DISCONNECTED cameras: 1'}
-398,9607,2024-01-30 13:10:58,2024-01-30 13:10:40,False,{'log': 'DISCONNECTED cameras: 1'}
-399,9607,2024-01-30 13:16:05,2024-01-30 13:15:40,False,{'log': 'DISCONNECTED cameras: 1'}
-528,9612,2024-01-30 12:20:32,2024-01-30 12:17:42,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-530,9612,2024-01-30 12:20:37,2024-01-30 12:18:12,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_01/GstURIDecodeBin:subbin_uridecodebin_01/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-532,9612,2024-01-30 12:41:29,2024-01-30 12:38:52,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-535,9612,2024-01-30 12:41:33,2024-01-30 12:39:30,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not read from resource.\nError details: gstrtspsrc.c(5361): gst_rtspsrc_loop_udp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_02/GstURIDecodeBin:subbin_uridecodebin_02/GstRTSPSrc:source:\nCould not receive message. (System error)'}
-536,9612,2024-01-30 12:41:37,2024-01-30 12:39:50,False,{'log': 'Source id 2 has been missing for 100 batches '}
+5,2006,2024-01-30 12:32:33,2024-01-30 12:32:01,False,{'log': 'NO STORAGE DEVICE FOUND'}
+7,2006,2024-01-30 12:32:35,2024-01-30 12:32:07,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+8,2006,2024-01-30 12:32:36,2024-01-30 12:32:25,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_02/GstURIDecodeBin:subbin_uridecodebin_02/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+10,2006,2024-01-30 12:33:59,2024-01-30 12:33:57,False,{'log': 'Source id 0 has been missing for 100 batches '}
+12,6101,2024-01-30 13:12:41,2024-01-30 10:25:35,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+14,6101,2024-01-30 13:12:44,2024-01-30 10:51:06,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+15,6101,2024-01-30 13:12:46,2024-01-30 10:51:12,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+17,6101,2024-01-30 13:12:49,2024-01-30 13:12:31,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+19,6101,2024-01-30 13:12:52,2024-01-30 13:12:37,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+20,6101,2024-01-30 13:12:55,2024-01-30 13:12:52,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+22,6101,2024-01-30 13:14:37,2024-01-30 13:14:29,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+24,6101,2024-01-30 13:14:48,2024-01-30 13:14:34,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+25,6101,2024-01-30 13:15:24,2024-01-30 13:14:34,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+26,6101,2024-01-30 13:15:26,2024-01-30 13:15:17,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+27,6101,2024-01-30 13:15:27,2024-01-30 13:15:22,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+29,6101,2024-01-30 13:16:11,2024-01-30 13:16:03,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+30,6101,2024-01-30 13:16:12,2024-01-30 13:16:08,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+32,6101,2024-01-30 13:16:55,2024-01-30 13:16:47,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+33,6101,2024-01-30 13:16:57,2024-01-30 13:16:52,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+35,6101,2024-01-30 13:17:41,2024-01-30 13:17:33,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+37,6101,2024-01-30 13:17:45,2024-01-30 13:17:38,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+39,6101,2024-01-30 13:18:39,2024-01-30 13:18:30,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+41,6101,2024-01-30 13:18:43,2024-01-30 13:18:35,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+42,6101,2024-01-30 13:19:26,2024-01-30 13:19:18,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+44,6101,2024-01-30 13:19:30,2024-01-30 13:19:23,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+46,6101,2024-01-30 13:20:15,2024-01-30 13:20:06,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+47,6101,2024-01-30 13:20:17,2024-01-30 13:20:11,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+49,6101,2024-01-30 13:21:02,2024-01-30 13:20:52,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
+52,8400,2024-01-30 13:19:22,2024-01-30 13:03:50,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+53,8400,2024-01-30 13:19:25,2024-01-30 13:04:04,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+55,8413,2024-01-30 12:29:40,2024-01-30 12:29:38,True,"{'log': ""Restarting. Execution number: 224 Check log for details.\n\n[ERROR] main: Parser Json config failed. Trying with backup json... \n[ERROR] aivat_parser_pipeline: At least a source should be enabled \n[ERROR] main: Backup json couldn't be parsed ""}"
+56,8413,2024-01-30 12:32:07,2024-01-30 12:32:06,False,{'log': 'DISCONNECTED cameras: 0 1 2'}
+57,8413,2024-01-30 12:32:15,2024-01-30 12:32:13,False,{'log': 'CONNECTED cameras: 0 1 2'}
+59,8413,2024-01-30 12:38:07,2024-01-30 12:37:03,False,{'log': 'Source id 0 has been missing for 100 batches '}
+60,8413,2024-01-30 12:59:30,2024-01-30 12:59:28,False,{'log': 'Source id 2 has been missing for 100 batches '}
+61,8413,2024-01-30 12:59:37,2024-01-30 12:59:36,False,{'log': 'Source id 2 reappeared after 155 misses '}
+62,8416,2024-01-30 13:06:47,2024-01-30 13:06:45,False,{'log': 'NO STORAGE DEVICE FOUND'}
+63,8417,2024-01-30 12:48:46,2024-01-30 12:46:12,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+65,8417,2024-01-30 12:48:50,2024-01-30 12:46:26,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+67,8417,2024-01-30 12:48:59,2024-01-30 12:47:14,False,{'log': 'Source id 1 has been missing for 100 batches '}
+69,8418,2024-01-30 13:05:01,2024-01-30 13:04:58,False,{'log': 'Source id 2 has been missing for 100 batches '}
+70,8418,2024-01-30 13:09:37,2024-01-30 13:09:33,False,{'log': 'Source id 2 reappeared after 6572 misses '}
+71,8418,2024-01-30 13:12:07,2024-01-30 13:12:05,False,{'log': 'Source id 2 has been missing for 100 batches '}
+72,8418,2024-01-30 13:13:21,2024-01-30 13:13:18,False,{'log': 'Source id 2 reappeared after 1244 misses '}
+74,8916,2024-01-30 12:48:45,2024-01-30 12:48:26,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+75,8916,2024-01-30 12:48:46,2024-01-30 12:48:41,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+77,8917,2024-01-30 12:34:14,2024-01-30 12:32:28,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+79,8917,2024-01-30 12:34:17,2024-01-30 12:32:42,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+81,8917,2024-01-30 12:34:19,2024-01-30 12:33:25,False,{'log': 'Source id 0 has been missing for 100 batches '}
+82,9154,2024-01-30 12:58:32,2024-01-30 12:55:28,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+84,9154,2024-01-30 12:58:37,2024-01-30 12:55:43,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+86,9154,2024-01-30 12:58:43,2024-01-30 12:56:27,False,{'log': 'Source id 2 has been missing for 100 batches '}
+88,9285,2024-01-30 12:42:21,2024-01-25 14:55:34,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+89,9285,2024-01-30 12:42:24,2024-01-25 15:36:47,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+91,9285,2024-01-30 12:42:26,2024-01-25 15:37:00,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+93,9285,2024-01-30 12:42:29,2024-01-25 16:19:23,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+95,9285,2024-01-30 12:42:33,2024-01-25 16:19:36,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+98,9285,2024-01-30 12:42:38,2024-01-30 12:39:44,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+99,9285,2024-01-30 12:42:40,2024-01-30 12:39:58,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+101,9285,2024-01-30 12:43:44,2024-01-30 12:43:42,False,{'log': 'Source id 1 has been missing for 100 batches '}
+102,9285,2024-01-30 12:43:57,2024-01-30 12:43:54,False,{'log': 'Source id 1 reappeared after 264 misses '}
+227,9341,2024-01-30 13:24:01,2024-01-30 12:18:52,True,"{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
+228,9341,2024-01-30 13:24:03,2024-01-30 12:21:35,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
+229,9341,2024-01-30 13:24:04,2024-01-30 12:41:01,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
+230,9341,2024-01-30 13:24:05,2024-01-30 12:41:08,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+232,9341,2024-01-30 13:24:09,2024-01-30 12:46:31,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+234,9341,2024-01-30 13:24:11,2024-01-30 12:46:45,True,"{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
+235,9341,2024-01-30 13:24:13,2024-01-30 13:13:22,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
+237,9341,2024-01-30 13:24:15,2024-01-30 13:13:29,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+238,9341,2024-01-30 13:24:17,2024-01-30 13:13:43,True,"{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
+239,9341,2024-01-30 13:24:19,2024-01-30 13:19:27,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+241,9341,2024-01-30 13:24:22,2024-01-30 13:19:41,True,"{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
+242,9341,2024-01-30 13:24:52,2024-01-30 13:24:45,True,"{'log': 'Restarting. Execution number: 19 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
+244,9352,2024-01-30 13:04:24,2024-01-30 13:02:13,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+245,9352,2024-01-30 13:04:28,2024-01-30 13:02:28,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+247,9352,2024-01-30 13:04:31,2024-01-30 13:03:17,False,{'log': 'Source id 0 has been missing for 100 batches '}
+248,9352,2024-01-30 13:04:32,2024-01-30 13:03:21,False,{'log': 'Source id 0 reappeared after 159 misses '}
+249,9357,2024-01-30 13:03:46,2024-01-30 13:03:19,False,{'log': 'NO STORAGE DEVICE FOUND'}
+251,9357,2024-01-30 13:03:49,2024-01-30 13:03:28,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+252,9357,2024-01-30 13:03:51,2024-01-30 13:03:42,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+254,9357,2024-01-30 13:04:19,2024-01-30 13:04:17,False,{'log': 'Source id 0 has been missing for 100 batches '}
+255,9357,2024-01-30 13:04:21,2024-01-30 13:04:17,False,{'log': 'Source id 1 has been missing for 100 batches '}
+256,9357,2024-01-30 13:04:23,2024-01-30 13:04:18,False,{'log': 'Source id 0 reappeared after 111 misses '}
+258,9409,2024-01-30 13:25:14,2024-01-27 18:41:14,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+260,9409,2024-01-30 13:25:17,2024-01-27 18:48:36,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+262,9409,2024-01-30 13:25:20,2024-01-27 18:48:51,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+264,9409,2024-01-30 13:25:24,2024-01-27 18:57:43,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+266,9409,2024-01-30 13:25:26,2024-01-27 18:58:44,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+268,9409,2024-01-30 13:25:29,2024-01-27 18:58:59,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+270,9409,2024-01-30 13:25:32,2024-01-27 19:00:09,False,{'log': 'Source id 1 has been missing for 100 batches '}
+271,9409,2024-01-30 13:25:35,2024-01-27 19:00:42,False,{'log': 'Source id 1 has been missing for 100 batches '}
+273,9409,2024-01-30 13:25:40,2024-01-27 19:21:25,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+275,9409,2024-01-30 13:25:44,2024-01-27 19:23:06,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+278,9409,2024-01-30 13:25:47,2024-01-27 19:24:07,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+279,9409,2024-01-30 13:25:48,2024-01-27 19:24:22,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+281,9409,2024-01-30 13:25:51,2024-01-27 19:25:02,False,{'log': 'Source id 0 has been missing for 100 batches '}
+282,9409,2024-01-30 13:25:53,2024-01-27 19:25:03,False,{'log': 'Source id 0 reappeared after 105 misses '}
+284,9409,2024-01-30 13:25:57,2024-01-28 16:08:20,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+285,9409,2024-01-30 13:25:59,2024-01-28 16:08:35,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+288,9409,2024-01-30 13:26:04,2024-01-29 07:51:22,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+289,9409,2024-01-30 13:26:07,2024-01-29 07:52:00,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+291,9409,2024-01-30 13:26:09,2024-01-29 07:52:24,False,{'log': 'Source id 1 has been missing for 100 batches '}
+292,9409,2024-01-30 13:26:11,2024-01-29 07:52:55,False,{'log': 'Source id 1 has been missing for 100 batches '}
+294,9409,2024-01-30 13:26:15,2024-01-29 12:35:04,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+296,9409,2024-01-30 13:26:19,2024-01-29 12:35:17,True,"{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element sgie_bin_nvinfer_15: Failed to create NvDsInferContext instance\nError details: gstnvinfer.cpp(1010): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:sgie_bin_15/GstNvInferFace:sgie_bin_nvinfer_15:\nConfig file path: ../GX/config/jxnx/sgie_face_landmarks_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
+298,9409,2024-01-30 13:26:23,2024-01-29 12:36:28,False,{'log': 'Source id 1 has been missing for 100 batches '}
+299,9409,2024-01-30 13:26:24,2024-01-29 12:36:55,False,{'log': 'Source id 1 has been missing for 100 batches '}
+301,9409,2024-01-30 13:26:29,2024-01-29 13:05:43,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+303,9409,2024-01-30 13:26:32,2024-01-29 13:05:58,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+305,9409,2024-01-30 13:26:35,2024-01-29 13:12:07,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+307,9409,2024-01-30 13:26:38,2024-01-29 13:13:08,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+309,9409,2024-01-30 13:26:41,2024-01-29 13:13:22,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+311,9409,2024-01-30 13:26:45,2024-01-29 13:14:04,False,{'log': 'Source id 0 has been missing for 100 batches '}
+312,9409,2024-01-30 13:26:46,2024-01-29 13:14:04,False,{'log': 'Source id 1 has been missing for 100 batches '}
+313,9409,2024-01-30 13:26:48,2024-01-29 13:14:07,False,{'log': 'Source id 0 reappeared after 153 misses '}
+314,9409,2024-01-30 13:27:13,2024-01-29 13:43:16,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+316,9409,2024-01-30 13:27:51,2024-01-29 14:13:24,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+319,9504,2024-01-30 13:05:55,2024-01-30 13:03:36,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+320,9504,2024-01-30 13:05:58,2024-01-30 13:03:49,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+323,9510,2024-01-30 13:17:11,2024-01-30 13:16:41,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+324,9510,2024-01-30 13:17:13,2024-01-30 13:16:56,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+326,9510,2024-01-30 13:17:54,2024-01-30 13:17:52,False,{'log': 'Source id 0 has been missing for 100 batches '}
+327,9510,2024-01-30 13:17:55,2024-01-30 13:17:53,False,{'log': 'Source id 0 reappeared after 109 misses '}
+328,9522,2024-01-30 12:38:44,2024-01-30 12:13:59,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+330,9522,2024-01-30 12:38:47,2024-01-30 12:14:14,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+333,9522,2024-01-30 12:38:54,2024-01-30 12:27:16,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+334,9522,2024-01-30 12:38:56,2024-01-30 12:27:30,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+336,9522,2024-01-30 13:15:37,2024-01-30 13:10:42,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+338,9522,2024-01-30 13:15:41,2024-01-30 13:10:57,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+340,9529,2024-01-30 13:11:42,2024-01-30 13:08:46,False,{'log': 'NO STORAGE DEVICE FOUND'}
+342,9529,2024-01-30 13:11:45,2024-01-30 13:08:56,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+343,9529,2024-01-30 13:11:46,2024-01-30 13:09:09,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+345,9533,2024-01-30 13:01:56,2024-01-30 13:01:54,False,{'log': 'NO STORAGE DEVICE FOUND'}
+346,9538,2024-01-30 13:11:13,2024-01-30 11:41:49,False,{'log': 'NO STORAGE DEVICE FOUND'}
+347,9538,2024-01-30 13:12:29,2024-01-30 12:41:54,False,{'log': 'NO STORAGE DEVICE FOUND'}
+348,9539,2024-01-30 12:32:29,2024-01-30 12:25:54,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+350,9539,2024-01-30 12:32:31,2024-01-30 12:26:09,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+353,9539,2024-01-30 13:26:53,2024-01-30 13:24:22,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+354,9539,2024-01-30 13:26:55,2024-01-30 13:24:37,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+356,9542,2024-01-30 12:31:44,2024-01-30 12:31:42,False,{'log': 'DISCONNECTED cameras: 2'}
+357,9542,2024-01-30 12:36:45,2024-01-30 12:36:42,False,{'log': 'DISCONNECTED cameras: 2'}
+358,9542,2024-01-30 12:41:45,2024-01-30 12:41:42,False,{'log': 'DISCONNECTED cameras: 2'}
+359,9542,2024-01-30 12:46:45,2024-01-30 12:46:42,False,{'log': 'DISCONNECTED cameras: 2'}
+360,9542,2024-01-30 12:51:45,2024-01-30 12:51:42,False,{'log': 'DISCONNECTED cameras: 2'}
+361,9542,2024-01-30 12:56:45,2024-01-30 12:56:42,False,{'log': 'DISCONNECTED cameras: 2'}
+362,9542,2024-01-30 13:01:49,2024-01-30 13:01:42,False,{'log': 'DISCONNECTED cameras: 2'}
+363,9542,2024-01-30 13:06:45,2024-01-30 13:06:42,False,{'log': 'DISCONNECTED cameras: 2'}
+364,9542,2024-01-30 13:11:45,2024-01-30 13:11:42,False,{'log': 'DISCONNECTED cameras: 2'}
+365,9542,2024-01-30 13:16:45,2024-01-30 13:16:42,False,{'log': 'DISCONNECTED cameras: 2'}
+366,9542,2024-01-30 13:17:02,2024-01-30 13:17:00,False,{'log': 'NO STORAGE DEVICE FOUND'}
+367,9542,2024-01-30 13:21:45,2024-01-30 13:21:42,False,{'log': 'DISCONNECTED cameras: 2'}
+368,9542,2024-01-30 13:26:45,2024-01-30 13:26:42,False,{'log': 'DISCONNECTED cameras: 2'}
+370,9543,2024-01-30 13:26:01,2024-01-30 13:25:41,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+371,9543,2024-01-30 13:26:03,2024-01-30 13:25:54,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+373,9543,2024-01-30 13:26:53,2024-01-30 13:26:50,False,{'log': 'Source id 0 has been missing for 100 batches '}
+374,9546,2024-01-30 12:48:23,2024-01-30 12:25:57,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+376,9546,2024-01-30 12:48:25,2024-01-30 12:26:12,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+378,9546,2024-01-30 12:48:39,2024-01-30 12:27:34,False,{'log': 'Source id 1 has been missing for 100 batches '}
+379,9546,2024-01-30 12:48:45,2024-01-30 12:27:55,False,{'log': 'Source id 1 has been missing for 100 batches '}
+380,9546,2024-01-30 12:48:46,2024-01-30 12:48:04,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+382,9546,2024-01-30 12:48:49,2024-01-30 12:48:20,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+384,9546,2024-01-30 12:55:05,2024-01-30 12:54:33,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+386,9546,2024-01-30 12:55:08,2024-01-30 12:54:49,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+388,9546,2024-01-30 12:55:29,2024-01-30 12:55:26,False,{'log': 'Source id 1 has been missing for 100 batches '}
+390,9547,2024-01-30 13:16:53,2024-01-30 13:14:27,False,{'log': 'NO STORAGE DEVICE FOUND'}
+391,9547,2024-01-30 13:16:55,2024-01-30 13:14:34,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+393,9547,2024-01-30 13:16:58,2024-01-30 13:14:49,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+395,9547,2024-01-30 13:17:05,2024-01-30 13:15:28,False,{'log': 'Source id 2 has been missing for 100 batches '}
+397,9548,2024-01-30 13:16:27,2024-01-30 13:14:07,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+399,9548,2024-01-30 13:16:30,2024-01-30 13:14:21,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+401,9548,2024-01-30 13:16:36,2024-01-30 13:15:02,False,{'log': 'Source id 1 has been missing for 100 batches '}
+403,9553,2024-01-30 12:33:10,2024-01-30 12:02:31,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+404,9553,2024-01-30 12:33:11,2024-01-30 12:02:45,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+406,9553,2024-01-30 12:33:14,2024-01-30 12:03:38,False,{'log': 'Source id 0 has been missing for 100 batches '}
+407,9553,2024-01-30 12:33:16,2024-01-30 12:03:39,False,{'log': 'Source id 0 reappeared after 108 misses '}
+409,9553,2024-01-30 12:33:24,2024-01-30 12:32:45,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+410,9553,2024-01-30 12:33:25,2024-01-30 12:33:00,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+412,9553,2024-01-30 12:34:06,2024-01-30 12:34:03,False,{'log': 'Source id 0 has been missing for 100 batches '}
+413,9555,2024-01-30 12:33:13,2024-01-30 12:30:29,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
+414,9555,2024-01-30 12:33:15,2024-01-30 12:30:36,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+416,9555,2024-01-30 12:33:20,2024-01-30 12:30:50,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+418,9558,2024-01-30 12:44:33,2024-01-29 18:56:58,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+419,9558,2024-01-30 12:44:56,2024-01-29 18:57:14,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+421,9558,2024-01-30 12:44:58,2024-01-29 18:57:52,False,{'log': 'Source id 0 has been missing for 100 batches '}
+422,9558,2024-01-30 12:45:00,2024-01-30 12:43:13,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+424,9558,2024-01-30 12:45:05,2024-01-30 12:43:29,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+427,9565,2024-01-30 12:29:58,2024-01-30 12:29:26,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+428,9565,2024-01-30 12:30:00,2024-01-30 12:29:40,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+430,9583,2024-01-30 12:40:34,2024-01-30 12:40:31,True,"{'log': ""No output has been read from the process's STDOUT in five minutes.\n\nNvMMLiteOpen : Block : BlockType = 261 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 261 ""}"
+432,9583,2024-01-30 12:40:51,2024-01-30 12:40:49,False,{'log': 'Source id 0 has been missing for 100 batches '}
+433,9583,2024-01-30 12:43:50,2024-01-30 12:43:47,False,{'log': 'NO STORAGE DEVICE FOUND'}
+434,9607,2024-01-30 12:30:58,2024-01-30 12:30:40,False,{'log': 'DISCONNECTED cameras: 1'}
+435,9607,2024-01-30 12:36:01,2024-01-30 12:35:40,False,{'log': 'DISCONNECTED cameras: 1'}
+436,9607,2024-01-30 12:40:58,2024-01-30 12:40:40,False,{'log': 'DISCONNECTED cameras: 1'}
+437,9607,2024-01-30 12:45:58,2024-01-30 12:45:40,False,{'log': 'DISCONNECTED cameras: 1'}
+438,9607,2024-01-30 12:50:58,2024-01-30 12:50:40,False,{'log': 'DISCONNECTED cameras: 1'}
+439,9607,2024-01-30 12:56:01,2024-01-30 12:55:40,False,{'log': 'DISCONNECTED cameras: 1'}
+440,9607,2024-01-30 13:00:59,2024-01-30 13:00:40,False,{'log': 'DISCONNECTED cameras: 1'}
+441,9607,2024-01-30 13:06:05,2024-01-30 13:05:40,False,{'log': 'DISCONNECTED cameras: 1'}
+442,9607,2024-01-30 13:10:58,2024-01-30 13:10:40,False,{'log': 'DISCONNECTED cameras: 1'}
+443,9607,2024-01-30 13:16:05,2024-01-30 13:15:40,False,{'log': 'DISCONNECTED cameras: 1'}
+444,9607,2024-01-30 13:20:58,2024-01-30 13:20:40,False,{'log': 'DISCONNECTED cameras: 1'}
+445,9607,2024-01-30 13:26:04,2024-01-30 13:25:40,False,{'log': 'DISCONNECTED cameras: 1'}
+586,9612,2024-01-30 12:41:29,2024-01-30 12:38:52,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+589,9612,2024-01-30 12:41:33,2024-01-30 12:39:30,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not read from resource.\nError details: gstrtspsrc.c(5361): gst_rtspsrc_loop_udp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_02/GstURIDecodeBin:subbin_uridecodebin_02/GstRTSPSrc:source:\nCould not receive message. (System error)'}
+590,9612,2024-01-30 12:41:37,2024-01-30 12:39:50,False,{'log': 'Source id 2 has been missing for 100 batches '}
