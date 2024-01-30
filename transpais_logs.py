@@ -82,7 +82,7 @@ def get_data(minutes=10):
             })
 
         # csv_filename = f"transpais_logs_{initial_datetime_name}_{final_datetime_name}.csv"
-        csv_filename = f"/home/spare/Documents/script/output/transpais_logs.csv"
+        csv_filename = f"./output/transpais_logs.csv"
         save_to_csv(data, csv_filename)
         print(f"Data has been written to {csv_filename}")
         
@@ -106,7 +106,7 @@ def get_data(minutes=10):
             })
             
         # csv_filename_gx = f"./transpais_gx_{initial_datetime_name}_{final_datetime_name}.csv"
-        csv_filename_gx = f"/home/spare/Documents/script/output/transpais_gx.csv"
+        csv_filename_gx = f"./output/transpais_gx.csv"
         save_to_csv(data_gx, csv_filename_gx)
         print(f"Data has been written to {csv_filename_gx}")
         

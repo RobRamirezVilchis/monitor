@@ -68,7 +68,7 @@ def main():
                 print(f'{client_names[client]} sin retrasos')
 
         print("\n")
-        time.sleep(120)
+        time.sleep(600)
 
 if __name__ == "__main__":
     main()
