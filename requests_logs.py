@@ -28,6 +28,30 @@ def make_request():
     # print(r.text)
     
     return r.json(), r.status_code
+
+
+def save_worst_ten(df):
+     # Guardar las 10 unidades que arrojan más errores, y cuántos son
+    file_name = f"./most_errors.csv"
+    file_exists = os.path.isfile(file_name)
+    field_names = ['Inicio', 'Fin']
+    fin = datetime.now().isoformat(timespec='seconds')
+    inicio = (datetime.now() - timedelta(minutes=interval)).isoformat(timespec='seconds')
+    line = [inicio, fin]
+    for n in range(1,11):
+        field_names.append(f'Unidad_{n}')
+        field_names.append(f'n_errores_{n}')
+        line.append(df.index[n-1])
+        line.append(df.iloc[n-1])
+
+
+    with open(file_name, mode="a", encoding="utf-8") as output_file:
+        writer = csv.writer(output_file)
+        if not file_exists:
+            writer.writeheader()
+
+        writer.writerow(line)
+        output_file.close()
     
     
 def main():
@@ -63,28 +87,7 @@ def main():
     units_most_errors = pd.Series(errors_per_unit[errors_per_unit > 10])
     worst_ten_units = errors_per_unit.iloc[:10]
 
-    # Guardar las 10 unidades que arrojan más errores, y cuántos son
-    file_name = f"/home/spare/Documents/script/most_errors.csv"
-    file_exists = os.path.isfile(file_name)
-    field_names = ['Inicio', 'Fin']
-    fin = datetime.now().isoformat(timespec='seconds')
-    inicio = (datetime.now() - timedelta(minutes=interval)).isoformat(timespec='seconds')
-    line = [inicio, fin]
-    for n in range(1,11):
-        field_names.append(f'Unidad_{n}')
-        field_names.append(f'n_errores_{n}')
-        line.append(worst_ten_units.index[n-1])
-        line.append(worst_ten_units.iloc[n-1])
-
-
-    with open(file_name, mode="a", encoding="utf-8") as output_file:
-        writer = csv.writer(output_file)
-        if not file_exists:
-            writer.writeheader()
-
-        writer.writerow(line)
-        output_file.close()
-
+    save_worst_ten(worst_ten_units)
 
     
     categories = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboots/Val", "SourceIDs", 
@@ -93,7 +96,7 @@ def main():
 
     for unit in units_most_errors.index:
         unit_logs = logs_no_dropping[logs_no_dropping["Unidad"] == unit]
-
+        print(unit_logs)
         # Categorización de logs
         reboots = unit_logs.loc[(unit_logs["Log"] == "reboot") | (unit_logs["Log"] == "start") | 
                                 (unit_logs["Log"] == "data_validation")]
@@ -136,11 +139,10 @@ def main():
 
     print("\n" + "#"*80 + "\n\n")
 
-
-    time.sleep(1200)
-
     with open("driving.json", "w") as file:
         json.dump(response, file, ensure_ascii=False)
+
+    time.sleep(1200)
     
     
 if __name__ == "__main__":

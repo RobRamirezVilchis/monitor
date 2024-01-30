@@ -7,11 +7,12 @@ from datetime import timedelta
 import transpais_logs
 import time
 
-def save_worst_ten(file_name, df):
+def save_worst_ten(df):
      # Guardar las 10 unidades que arrojan más errores, y cuántos son
     file_name = f"./most_errors.csv"
     file_exists = os.path.isfile(file_name)
     field_names = ['Inicio', 'Fin']
+
     fin = datetime.now().isoformat(timespec='seconds')
     inicio = (datetime.now() - timedelta(minutes=interval)).isoformat(timespec='seconds')
     line = [inicio, fin]
@@ -31,6 +32,7 @@ def save_worst_ten(file_name, df):
         output_file.close()
 
 def main():
+    global interval
     interval = 60 # Minutes
     while True:
         try:
@@ -48,8 +50,11 @@ def main():
 
         critical = gx_csv.loc[(gx_csv["Eventos_pendientes"] > 1000) | (gx_csv["Status_pendientes"] > 1000)]
 
+
+        logs_last_hour = status_logs[status_logs["Timestamp"] > (datetime.now()-timedelta(minutes=61))]
+
         # Quitar logs de batch dropping
-        logs_no_dropping = status_logs.loc[status_logs["Log"].str.contains("Batch dropping").apply(lambda x: not x)]
+        logs_no_dropping = logs_last_hour.loc[logs_last_hour["Log"].str.contains("Batch dropping").apply(lambda x: not x)]
         
         # Quitar logs que sólo sean ''}
         logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Log"] == "{'log': ''}").apply(lambda x: not x)]
@@ -71,14 +76,16 @@ def main():
             unit_logs = logs_no_dropping[logs_no_dropping["Unidad"] == unit]
 
             # Categorización de logs
-            reboots = unit_logs.loc[(unit_logs["Log"] == "reboot") | (unit_logs["Log"] == "start") | (unit_logs["Log"] == "data_validation")]
+            reboots = unit_logs.loc[(unit_logs["Log"] == "reboot") | (unit_logs["Log"] == "start") | 
+                                    (unit_logs["Log"] == "data_validation")]
             total_restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number:")]
             source_ids = unit_logs.loc[unit_logs["Log"].str.contains("Source id")]
             camera_connection = unit_logs.loc[unit_logs["Log"].str.contains("cameras")]
-            partition = unit_logs.loc[unit_logs["Log"].str.contains("FORMATTING PARTITION") | unit_logs["Log"].str.contains("NO STORAGE DEVICE FOUND")]
+            partition = unit_logs.loc[unit_logs["Log"].str.contains("FORMATTING PARTITION") | 
+                                      unit_logs["Log"].str.contains("NO STORAGE DEVICE FOUND")]
             forced = unit_logs.loc[unit_logs["Log"] == "forced_reboot"]
 
-            problems = [total_restarts, reboots, source_ids, camera_connection, partition, forced] # validation]
+            problems = [total_restarts, reboots, source_ids, camera_connection, partition, forced]
             sum_categories = sum([len(p) for p in problems])
             others = len(unit_logs) - sum_categories
 
