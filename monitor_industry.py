@@ -46,13 +46,16 @@ def main():
         print(f'Hora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
         for client in clients:
             delay_found = False
-            #try:
-            response = get_data(client, credentials)
-
-            '''except:
+            try:
+                response = get_data(client, credentials)
+            except:
                 print("Error conectando a DB")
-                continue'''
-            #print(response)
+                continue
+
+            if response == {}:
+                print(f"{client_names[client]} sin conexión")
+                continue
+
             for device, logs in response.items():
                 
                 last_register_time = datetime.fromisoformat(logs[0]["register_time"][:-1])
@@ -60,7 +63,7 @@ def main():
                 
                 if time_since_log > timedelta(minutes=11):
                     delay = str(time_since_log-timedelta(minutes=10)).split('.')[0]
-                    print(f'{client_names[client]} {device} delayed by {delay}')
+                    print(f'{client_names[client]} {device} atrasado por {delay}')
                     delay_found = True
                                 
                 log = logs[0]["log"]
