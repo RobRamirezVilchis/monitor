@@ -1,8 +1,4 @@
 Unidad,Fecha_subida,Timestamp,Error,Log
-2003,2024-01-30 12:48:22,2024-01-30 12:48:00,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-2003,2024-01-30 12:48:24,2024-01-30 12:48:00,False,{'log': ''}
-2003,2024-01-30 12:48:25,2024-01-30 12:48:14,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-2003,2024-01-30 12:49:36,2024-01-30 12:49:32,False,{'log': ''}
 6101,2024-01-30 13:12:41,2024-01-30 10:25:35,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
 6101,2024-01-30 13:12:43,2024-01-30 10:25:35,False,{'log': ''}
 6101,2024-01-30 13:12:44,2024-01-30 10:51:06,False,{'log': 'FORMATTING PARTITION /dev/sda1 IO ERROR'}
@@ -141,21 +137,13 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 8414,2024-01-30 13:30:48,2024-01-30 13:28:59,False,{'log': ''}
 8414,2024-01-30 13:30:50,2024-01-30 13:29:06,False,{'log': 'Source id 0 has been missing for 100 batches '}
 8414,2024-01-30 13:39:02,2024-01-30 13:38:50,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
+8414,2024-01-30 13:44:17,2024-01-30 13:43:57,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
+8414,2024-01-30 13:50:20,2024-01-30 13:50:06,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
 8416,2024-01-30 13:06:47,2024-01-30 13:06:45,False,{'log': 'NO STORAGE DEVICE FOUND'}
-8417,2024-01-30 12:48:46,2024-01-30 12:46:12,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-8417,2024-01-30 12:48:48,2024-01-30 12:46:12,False,{'log': ''}
-8417,2024-01-30 12:48:50,2024-01-30 12:46:26,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-8417,2024-01-30 12:48:52,2024-01-30 12:47:08,False,{'log': ''}
-8417,2024-01-30 12:48:59,2024-01-30 12:47:14,False,{'log': 'Source id 1 has been missing for 100 batches '}
-8417,2024-01-30 12:52:18,2024-01-30 12:52:09,False,{'log': ''}
 8418,2024-01-30 13:05:01,2024-01-30 13:04:58,False,{'log': 'Source id 2 has been missing for 100 batches '}
 8418,2024-01-30 13:09:37,2024-01-30 13:09:33,False,{'log': 'Source id 2 reappeared after 6572 misses '}
 8418,2024-01-30 13:12:07,2024-01-30 13:12:05,False,{'log': 'Source id 2 has been missing for 100 batches '}
 8418,2024-01-30 13:13:21,2024-01-30 13:13:18,False,{'log': 'Source id 2 reappeared after 1244 misses '}
-8916,2024-01-30 12:48:44,2024-01-30 12:48:26,False,{'log': ''}
-8916,2024-01-30 12:48:45,2024-01-30 12:48:26,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-8916,2024-01-30 12:48:46,2024-01-30 12:48:41,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-8916,2024-01-30 12:49:11,2024-01-30 12:49:08,False,{'log': ''}
 9154,2024-01-30 12:58:32,2024-01-30 12:55:28,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
 9154,2024-01-30 12:58:34,2024-01-30 12:55:28,False,{'log': ''}
 9154,2024-01-30 12:58:37,2024-01-30 12:55:43,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
@@ -169,29 +157,130 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9154,2024-01-30 13:39:07,2024-01-30 13:36:36,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
 9154,2024-01-30 13:39:09,2024-01-30 13:37:25,False,{'log': ''}
 9154,2024-01-30 13:42:29,2024-01-30 13:42:26,False,{'log': ''}
-9285,2024-01-30 12:43:57,2024-01-30 12:43:54,False,{'log': 'Source id 1 reappeared after 264 misses '}
-9285,2024-01-30 12:46:04,2024-01-30 12:46:01,False,{'log': ''}
 9307,2024-01-30 13:34:55,2024-01-30 13:31:10,False,{'log': 'NO STORAGE DEVICE FOUND'}
 9307,2024-01-30 13:34:57,2024-01-30 13:31:17,False,{'log': ''}
 9307,2024-01-30 13:34:58,2024-01-30 13:31:17,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
 9307,2024-01-30 13:35:00,2024-01-30 13:31:32,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
 9307,2024-01-30 13:35:03,2024-01-30 13:32:05,False,{'log': ''}
 9307,2024-01-30 13:35:04,2024-01-30 13:32:13,False,{'log': 'Source id 0 has been missing for 100 batches '}
-9328,2024-01-30 12:44:30,2024-01-30 12:43:55,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9328,2024-01-30 12:44:37,2024-01-30 12:44:02,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9328,2024-01-30 12:45:39,2024-01-30 12:45:04,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9328,2024-01-30 12:45:45,2024-01-30 12:45:10,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9328,2024-01-30 12:47:16,2024-01-30 12:46:41,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9328,2024-01-30 12:47:22,2024-01-30 12:46:47,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9328,2024-01-30 12:48:18,2024-01-30 12:47:43,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9328,2024-01-30 12:48:24,2024-01-30 12:47:49,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9328,2024-01-30 12:49:48,2024-01-30 12:49:13,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9328,2024-01-30 12:49:54,2024-01-30 12:49:19,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9328,2024-01-30 12:50:59,2024-01-30 12:50:24,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9328,2024-01-30 12:51:04,2024-01-30 12:50:29,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9328,2024-01-30 12:52:23,2024-01-30 12:51:49,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9328,2024-01-30 12:52:30,2024-01-30 12:51:55,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9328,2024-01-30 12:53:51,2024-01-30 12:53:16,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:21,2024-01-21 20:20:54,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:23,2024-01-21 20:21:00,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:24,2024-01-21 20:23:34,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:26,2024-01-21 20:23:40,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:28,2024-01-21 20:26:39,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:30,2024-01-21 20:26:45,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:32,2024-01-21 20:29:59,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:34,2024-01-21 20:30:04,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:36,2024-01-21 20:33:41,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:37,2024-01-21 20:33:47,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:39,2024-01-21 20:37:39,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:41,2024-01-21 20:37:44,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:42,2024-01-21 20:40:37,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:44,2024-01-21 20:40:42,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:46,2024-01-21 20:44:31,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:48,2024-01-21 20:44:36,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:50,2024-01-21 20:49:59,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:51,2024-01-21 20:50:04,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:53,2024-01-21 20:53:26,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:55,2024-01-21 20:53:31,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:47:58,2024-01-21 20:58:20,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:47:59,2024-01-21 20:58:25,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:48:00,2024-01-21 21:01:44,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:48:02,2024-01-21 21:01:49,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:48:05,2024-01-21 21:04:30,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:48:06,2024-01-21 21:04:35,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:48:16,2024-01-21 21:08:54,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:48:23,2024-01-21 21:08:59,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:48:38,2024-01-21 21:49:51,False,{'log': ''}
+9312,2024-01-30 13:48:41,2024-01-21 21:49:51,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:48:45,2024-01-21 23:14:57,False,{'log': ''}
+9312,2024-01-30 13:48:46,2024-01-21 23:14:57,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:48:48,2024-01-21 23:15:16,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:48:50,2024-01-21 23:15:40,False,{'log': ''}
+9312,2024-01-30 13:48:53,2024-01-21 23:15:48,False,{'log': 'Source id 0 has been missing for 100 batches '}
+9312,2024-01-30 13:48:54,2024-01-21 23:16:42,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:48:56,2024-01-21 23:16:50,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:48:58,2024-01-22 00:21:59,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:48:59,2024-01-22 00:21:59,False,{'log': ''}
+9312,2024-01-30 13:49:02,2024-01-22 00:22:30,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+9312,2024-01-30 13:49:04,2024-01-22 02:17:09,False,{'log': ''}
+9312,2024-01-30 13:49:05,2024-01-22 02:17:09,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:49:08,2024-01-22 02:17:26,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:49:10,2024-01-22 02:18:01,False,{'log': ''}
+9312,2024-01-30 13:49:12,2024-01-22 02:18:06,False,{'log': 'Source id 0 has been missing for 100 batches '}
+9312,2024-01-30 13:49:14,2024-01-22 02:18:06,False,{'log': 'Source id 1 has been missing for 100 batches '}
+9312,2024-01-30 13:49:15,2024-01-22 07:50:55,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:49:17,2024-01-22 07:50:55,False,{'log': ''}
+9312,2024-01-30 13:49:19,2024-01-22 07:51:09,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:49:21,2024-01-22 07:51:52,False,{'log': ''}
+9312,2024-01-30 13:49:25,2024-01-22 07:51:57,False,{'log': 'Source id 2 has been missing for 100 batches '}
+9312,2024-01-30 13:49:27,2024-01-22 07:51:57,False,{'log': 'Source id 0 has been missing for 100 batches '}
+9312,2024-01-30 13:49:28,2024-01-22 07:56:43,True,"{'log': ""No output has been read from the process's STDOUT in five minutes.\n\n0:00:19.635622912 \x1b[332m 9517\x1b[00m   0x55a7bef450 \x1b[33;01mWARN   \x1b[00m \x1b[00m       nvinfertensor gstnvinfer.cpp:1298:gst_nvinfer_output_loop:<sgie_bin_nvinfer_18>\x1b[00m error: streaming stopped, reason not-linked (-1)\n0:00:19.718505024 \x1b[332m 9517\x1b[00m   0x55a7beecf0 \x1b[33;01mWARN   \x1b[00m \x1b[00m         nvinferface gstnvinfer.cpp:2957:gst_nvinfer_output_loop:<sgie_bin_nvinfer_16>\x1b[00m error: Internal data stream error.\n0:00:19.718591328 \x1b[332m 9517\x1b[00m   0x55a7beecf0 \x1b[33;01mWARN   \x1b[00m \x1b[00m         nvinferface gstnvinfer.cpp:2957:gst_nvinfer_output_loop:<sgie_bin_nvinfer_16>\x1b[00m error: streaming stopped, reason not-linked (-1)""}"
+9312,2024-01-30 13:49:33,2024-01-22 08:40:02,False,{'log': ''}
+9312,2024-01-30 13:49:35,2024-01-22 08:40:02,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:49:38,2024-01-22 08:40:16,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:49:42,2024-01-22 08:41:21,False,{'log': ''}
+9312,2024-01-30 13:49:48,2024-01-22 08:54:53,False,{'log': 'Source id 0 has been missing for 100 batches '}
+9312,2024-01-30 13:49:50,2024-01-22 08:55:04,False,{'log': 'Source id 0 reappeared after 252 misses '}
+9312,2024-01-30 13:49:54,2024-01-22 08:57:05,False,{'log': 'Source id 0 has been missing for 100 batches '}
+9312,2024-01-30 13:49:56,2024-01-22 08:57:07,False,{'log': 'Source id 0 reappeared after 134 misses '}
+9312,2024-01-30 13:49:58,2024-01-22 08:57:30,True,{'log': 'Restarting. Execution number: 6 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(5348): gst_rtspsrc_loop_udp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_02/GstURIDecodeBin:subbin_uridecodebin_02/GstRTSPSrc:source:\nCould not connect to server. (Generic error)'}
+9312,2024-01-30 13:50:00,2024-01-22 08:59:59,False,{'log': 'DISCONNECTED cameras: 0 1 2'}
+9312,2024-01-30 13:50:02,2024-01-22 09:00:03,False,{'log': 'CONNECTED cameras: 0 2'}
+9312,2024-01-30 13:50:03,2024-01-22 21:11:46,False,{'log': ''}
+9312,2024-01-30 13:50:04,2024-01-22 21:11:46,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:50:07,2024-01-22 21:11:46,False,{'log': 'DISCONNECTED cameras: 0 1 2'}
+9312,2024-01-30 13:50:09,2024-01-22 21:11:50,False,{'log': 'CONNECTED cameras: 0 1 2'}
+9312,2024-01-30 13:50:12,2024-01-22 21:12:04,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:50:14,2024-01-22 21:12:36,False,{'log': ''}
+9312,2024-01-30 13:50:16,2024-01-22 21:12:43,False,{'log': 'Source id 0 has been missing for 100 batches '}
+9312,2024-01-30 13:50:18,2024-01-22 21:22:30,False,{'log': 'Source id 2 has been missing for 100 batches '}
+9312,2024-01-30 13:50:20,2024-01-22 21:27:27,True,"{'log': ""No output has been read from the process's STDOUT in five minutes.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(5348): gst_rtspsrc_loop_udp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_01/GstURIDecodeBin:subbin_uridecodebin_01/GstRTSPSrc:source:\nCould not connect to server. (Generic error)""}"
+9312,2024-01-30 13:50:21,2024-01-22 21:27:49,False,{'log': ''}
+9312,2024-01-30 13:50:22,2024-01-22 21:27:54,False,{'log': 'Source id 1 has been missing for 100 batches '}
+9312,2024-01-30 13:50:24,2024-01-22 21:27:54,False,{'log': 'Source id 0 has been missing for 100 batches '}
+9312,2024-01-30 13:50:26,2024-01-22 21:31:44,False,{'log': 'DISCONNECTED cameras: 0 1 2'}
+9312,2024-01-30 13:50:30,2024-01-22 21:31:48,False,{'log': 'CONNECTED cameras: 0 1 2'}
+9312,2024-01-30 13:50:32,2024-01-22 21:32:32,False,{'log': 'Source id 0 has been missing for 100 batches '}
+9312,2024-01-30 13:50:35,2024-01-22 21:32:37,False,{'log': 'Source id 0 reappeared after 133 misses '}
+9312,2024-01-30 13:50:39,2024-01-22 21:32:50,False,{'log': ''}
+9312,2024-01-30 13:50:41,2024-01-22 22:11:20,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:50:42,2024-01-22 22:11:20,False,{'log': ''}
+9312,2024-01-30 13:50:43,2024-01-22 22:11:35,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:50:46,2024-01-22 22:12:32,False,{'log': ''}
+9312,2024-01-30 13:50:49,2024-01-22 22:18:18,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:50:51,2024-01-22 22:19:06,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:50:53,2024-01-22 22:19:13,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:50:54,2024-01-22 22:19:44,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:50:56,2024-01-22 22:19:51,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:50:57,2024-01-22 22:20:31,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:50:59,2024-01-22 22:20:39,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:51:00,2024-01-22 22:21:10,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:51:02,2024-01-22 22:21:16,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:51:03,2024-01-22 22:21:51,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:51:05,2024-01-22 22:21:57,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:51:07,2024-01-22 22:40:57,False,{'log': ''}
+9312,2024-01-30 13:51:08,2024-01-22 22:40:57,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:51:10,2024-01-22 22:41:12,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:51:12,2024-01-22 22:41:55,False,{'log': ''}
+9312,2024-01-30 13:51:14,2024-01-22 22:43:07,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:51:16,2024-01-22 22:43:13,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:51:17,2024-01-22 23:51:07,False,{'log': ''}
+9312,2024-01-30 13:51:19,2024-01-22 23:51:07,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:51:21,2024-01-22 23:51:21,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:51:23,2024-01-22 23:52:09,False,{'log': ''}
+9312,2024-01-30 13:51:24,2024-01-22 23:52:16,False,{'log': 'Source id 2 has been missing for 100 batches '}
+9312,2024-01-30 13:51:26,2024-01-22 23:52:16,False,{'log': 'Source id 1 has been missing for 100 batches '}
+9312,2024-01-30 13:51:27,2024-01-22 23:52:43,False,{'log': 'Source id 1 has been missing for 100 batches '}
+9312,2024-01-30 13:51:29,2024-01-22 23:53:34,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9312,2024-01-30 13:51:31,2024-01-22 23:53:40,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9312,2024-01-30 13:51:32,2024-01-23 00:27:46,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:51:33,2024-01-23 00:27:46,False,{'log': ''}
+9312,2024-01-30 13:51:35,2024-01-23 00:28:01,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
+9312,2024-01-30 13:51:36,2024-01-23 01:14:37,False,{'log': ''}
+9312,2024-01-30 13:51:38,2024-01-23 01:14:37,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
+9312,2024-01-30 13:51:40,2024-01-23 01:14:51,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
+9312,2024-01-30 13:51:41,2024-01-23 01:15:58,False,{'log': ''}
 9328,2024-01-30 12:54:07,2024-01-30 12:53:32,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
 9328,2024-01-30 12:55:01,2024-01-30 12:54:26,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
 9328,2024-01-30 12:55:07,2024-01-30 12:54:32,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
@@ -292,6 +381,24 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9328,2024-01-30 13:42:02,2024-01-30 13:41:27,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
 9328,2024-01-30 13:42:59,2024-01-30 13:42:23,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
 9328,2024-01-30 13:43:04,2024-01-30 13:42:29,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:44:00,2024-01-30 13:43:24,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:44:05,2024-01-30 13:43:30,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:45:58,2024-01-30 13:45:22,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:46:03,2024-01-30 13:45:28,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:47:30,2024-01-30 13:46:55,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:47:35,2024-01-30 13:47:00,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:48:45,2024-01-30 13:48:10,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:48:51,2024-01-30 13:48:16,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:49:44,2024-01-30 13:49:09,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:49:49,2024-01-30 13:49:15,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:50:45,2024-01-30 13:50:10,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:50:52,2024-01-30 13:50:17,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:51:44,2024-01-30 13:51:09,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:51:49,2024-01-30 13:51:15,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:52:29,2024-01-30 13:51:54,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:52:36,2024-01-30 13:52:01,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9328,2024-01-30 13:53:12,2024-01-30 13:52:37,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9328,2024-01-30 13:53:20,2024-01-30 13:52:45,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
 9341,2024-01-30 13:23:58,2024-01-30 12:18:38,False,{'log': ''}
 9341,2024-01-30 13:24:01,2024-01-30 12:18:52,True,"{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
 9341,2024-01-30 13:24:03,2024-01-30 12:21:35,False,{'log': 'FORMATTING PARTITION /dev/sda1 NOT MOUNTED'}
@@ -312,6 +419,8 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9341,2024-01-30 13:30:00,2024-01-30 13:29:52,True,"{'log': 'Restarting. Execution number: 44 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
 9341,2024-01-30 13:35:03,2024-01-30 13:34:54,True,"{'log': 'Restarting. Execution number: 74 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
 9341,2024-01-30 13:40:14,2024-01-30 13:40:09,True,"{'log': 'Restarting. Execution number: 106 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
+9341,2024-01-30 13:45:30,2024-01-30 13:45:25,True,"{'log': 'Restarting. Execution number: 117 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
+9341,2024-01-30 13:51:56,2024-01-30 13:51:51,True,"{'log': 'Restarting. Execution number: 119 Check log for details.\n\nERROR from element pgie_bin_infer_04: Failed to create NvDsInferContext instance\nError details: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(841): gst_nvinfer_start (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:pgie_bin_04/GstNvInfer:pgie_bin_infer_04:\nConfig file path: ../GX/config/jxnx/yolov5_config_JXNX.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED'}"
 9352,2024-01-30 13:04:22,2024-01-30 13:02:13,False,{'log': ''}
 9352,2024-01-30 13:04:24,2024-01-30 13:02:13,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
 9352,2024-01-30 13:04:28,2024-01-30 13:02:28,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
@@ -530,8 +639,6 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9539,2024-01-30 13:42:50,2024-01-30 13:40:35,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
 9539,2024-01-30 13:42:51,2024-01-30 13:41:08,False,{'log': ''}
 9539,2024-01-30 13:42:53,2024-01-30 13:41:17,False,{'log': 'Source id 0 has been missing for 100 batches '}
-9542,2024-01-30 12:46:45,2024-01-30 12:46:42,False,{'log': 'DISCONNECTED cameras: 2'}
-9542,2024-01-30 12:51:45,2024-01-30 12:51:42,False,{'log': 'DISCONNECTED cameras: 2'}
 9542,2024-01-30 12:56:45,2024-01-30 12:56:42,False,{'log': 'DISCONNECTED cameras: 2'}
 9542,2024-01-30 13:01:49,2024-01-30 13:01:42,False,{'log': 'DISCONNECTED cameras: 2'}
 9542,2024-01-30 13:06:45,2024-01-30 13:06:42,False,{'log': 'DISCONNECTED cameras: 2'}
@@ -543,21 +650,13 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9542,2024-01-30 13:31:45,2024-01-30 13:31:42,False,{'log': 'DISCONNECTED cameras: 2'}
 9542,2024-01-30 13:36:45,2024-01-30 13:36:42,False,{'log': 'DISCONNECTED cameras: 2'}
 9542,2024-01-30 13:41:45,2024-01-30 13:41:42,False,{'log': 'DISCONNECTED cameras: 2'}
+9542,2024-01-30 13:46:45,2024-01-30 13:46:42,False,{'log': 'DISCONNECTED cameras: 2'}
+9542,2024-01-30 13:51:45,2024-01-30 13:51:42,False,{'log': 'DISCONNECTED cameras: 2'}
 9543,2024-01-30 13:25:59,2024-01-30 13:25:41,False,{'log': ''}
 9543,2024-01-30 13:26:01,2024-01-30 13:25:41,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
 9543,2024-01-30 13:26:03,2024-01-30 13:25:54,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
 9543,2024-01-30 13:26:44,2024-01-30 13:26:42,False,{'log': ''}
 9543,2024-01-30 13:26:53,2024-01-30 13:26:50,False,{'log': 'Source id 0 has been missing for 100 batches '}
-9546,2024-01-30 12:48:23,2024-01-30 12:25:57,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-9546,2024-01-30 12:48:24,2024-01-30 12:25:57,False,{'log': ''}
-9546,2024-01-30 12:48:25,2024-01-30 12:26:12,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-9546,2024-01-30 12:48:27,2024-01-30 12:27:02,False,{'log': ''}
-9546,2024-01-30 12:48:39,2024-01-30 12:27:34,False,{'log': 'Source id 1 has been missing for 100 batches '}
-9546,2024-01-30 12:48:45,2024-01-30 12:27:55,False,{'log': 'Source id 1 has been missing for 100 batches '}
-9546,2024-01-30 12:48:46,2024-01-30 12:48:04,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-9546,2024-01-30 12:48:48,2024-01-30 12:48:04,False,{'log': ''}
-9546,2024-01-30 12:48:49,2024-01-30 12:48:20,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-9546,2024-01-30 12:49:09,2024-01-30 12:49:06,False,{'log': ''}
 9546,2024-01-30 12:55:05,2024-01-30 12:54:33,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
 9546,2024-01-30 12:55:07,2024-01-30 12:54:33,False,{'log': ''}
 9546,2024-01-30 12:55:08,2024-01-30 12:54:49,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
@@ -583,15 +682,6 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9557,2024-01-30 13:39:25,2024-01-30 13:37:31,False,{'log': ''}
 9557,2024-01-30 13:39:27,2024-01-30 13:37:39,False,{'log': 'Source id 0 has been missing for 100 batches '}
 9557,2024-01-30 13:39:29,2024-01-30 13:37:43,False,{'log': 'Source id 0 reappeared after 162 misses '}
-9558,2024-01-30 12:44:31,2024-01-29 18:56:58,False,{'log': ''}
-9558,2024-01-30 12:44:33,2024-01-29 18:56:58,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-9558,2024-01-30 12:44:56,2024-01-29 18:57:14,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nNvMMLiteOpen : Block : BlockType = 279 \nNVMEDIA: Reading vendor.tegra.display-size : status: 6 \nNvMMLiteBlockCreate : Block : BlockType = 279 '}
-9558,2024-01-30 12:44:57,2024-01-29 18:57:45,False,{'log': ''}
-9558,2024-01-30 12:44:58,2024-01-29 18:57:52,False,{'log': 'Source id 0 has been missing for 100 batches '}
-9558,2024-01-30 12:45:00,2024-01-30 12:43:13,False,{'log': 'Data validation failed: rc 4 No checksum.json file found in current directory.\n'}
-9558,2024-01-30 12:45:01,2024-01-30 12:43:13,False,{'log': ''}
-9558,2024-01-30 12:45:05,2024-01-30 12:43:29,True,{'log': 'Restarting. Execution number: 1 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(7469): gst_rtspsrc_retrieve_sdp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_00/GstURIDecodeBin:subbin_uridecodebin_00/GstRTSPSrc:source:\nFailed to connect. (Generic error)'}
-9558,2024-01-30 12:45:10,2024-01-30 12:44:39,False,{'log': ''}
 9574,2024-01-30 13:35:12,2024-01-30 13:35:10,False,{'log': 'Source id 1 has been missing for 100 batches '}
 9574,2024-01-30 13:35:15,2024-01-30 13:35:12,False,{'log': 'Source id 2 has been missing for 100 batches '}
 9574,2024-01-30 13:39:12,2024-01-30 13:39:10,False,{'log': 'Source id 1 reappeared after 6028 misses '}
@@ -625,11 +715,11 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9582,2024-01-30 13:35:06,2024-01-30 13:34:40,False,{'log': ''}
 9582,2024-01-30 13:36:22,2024-01-30 13:36:20,False,{'log': 'Source id 2 has been missing for 100 batches '}
 9582,2024-01-30 13:39:45,2024-01-30 13:39:42,False,{'log': ''}
+9583,2024-01-30 13:43:54,2024-01-30 13:43:52,False,{'log': 'NO STORAGE DEVICE FOUND'}
 9587,2024-01-30 13:35:39,2024-01-30 13:35:23,False,{'log': 'Source id 2 has been missing for 100 batches '}
+9587,2024-01-30 13:53:17,2024-01-30 13:53:02,True,{'log': 'Restarting. Execution number: 26 Check log for details.\n\nERROR from element source: Could not open resource for reading and writing.\nError details: gstrtspsrc.c(5348): gst_rtspsrc_loop_udp (): /GstPipeline:GX_SYSTEM-pipeline/GstBin:multisrc_bin_00/GstBin:multisrc_bin_subbin_02/GstURIDecodeBin:subbin_uridecodebin_02/GstRTSPSrc:source:\nCould not connect to server. (Generic error)'}
 9600,2024-01-30 13:33:40,2024-01-30 13:33:37,True,"{'log': ""Restarting. Execution number: 4 Check log for details.\n\nBatch dropping disabled. Delay: 0s \nterminate called after throwing an instance of 'cv::Exception'\n  what():  OpenCV(4.1.0) /home/nvidia/workspace/opencv-4.1.0/modules/core/include/opencv2/core/cuda/common.hpp:102: error: (-217:Gpu API call) invalid argument in function 'bindTexture'""}"
 9600,2024-01-30 13:33:51,2024-01-30 13:33:48,False,{'log': ''}
-9607,2024-01-30 12:45:58,2024-01-30 12:45:40,False,{'log': 'DISCONNECTED cameras: 1'}
-9607,2024-01-30 12:50:58,2024-01-30 12:50:40,False,{'log': 'DISCONNECTED cameras: 1'}
 9607,2024-01-30 12:56:01,2024-01-30 12:55:40,False,{'log': 'DISCONNECTED cameras: 1'}
 9607,2024-01-30 13:00:59,2024-01-30 13:00:40,False,{'log': 'DISCONNECTED cameras: 1'}
 9607,2024-01-30 13:06:05,2024-01-30 13:05:40,False,{'log': 'DISCONNECTED cameras: 1'}
@@ -640,37 +730,8 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9607,2024-01-30 13:30:59,2024-01-30 13:30:40,False,{'log': 'DISCONNECTED cameras: 1'}
 9607,2024-01-30 13:35:59,2024-01-30 13:35:40,False,{'log': 'DISCONNECTED cameras: 1'}
 9607,2024-01-30 13:40:58,2024-01-30 13:40:40,False,{'log': 'DISCONNECTED cameras: 1'}
-9608,2024-01-30 12:43:56,2024-01-30 12:43:42,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:44:15,2024-01-30 12:44:00,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:44:24,2024-01-30 12:44:10,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:44:50,2024-01-30 12:44:35,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:45:04,2024-01-30 12:44:50,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:45:19,2024-01-30 12:45:05,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:45:40,2024-01-30 12:45:26,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:45:57,2024-01-30 12:45:43,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:46:15,2024-01-30 12:46:01,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:46:32,2024-01-30 12:46:18,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:46:55,2024-01-30 12:46:41,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:47:10,2024-01-30 12:46:55,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:47:23,2024-01-30 12:47:09,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:47:42,2024-01-30 12:47:28,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:48:06,2024-01-30 12:47:52,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:48:25,2024-01-30 12:48:11,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:48:38,2024-01-30 12:48:24,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:48:54,2024-01-30 12:48:40,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:49:09,2024-01-30 12:48:54,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:49:24,2024-01-30 12:49:10,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:49:38,2024-01-30 12:49:24,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:49:58,2024-01-30 12:49:44,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:50:10,2024-01-30 12:49:56,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:50:33,2024-01-30 12:50:19,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:50:50,2024-01-30 12:50:35,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:51:25,2024-01-30 12:51:11,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:51:39,2024-01-30 12:51:25,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:52:12,2024-01-30 12:51:58,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:52:18,2024-01-30 12:52:04,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9608,2024-01-30 12:53:15,2024-01-30 12:53:01,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
-9608,2024-01-30 12:53:22,2024-01-30 12:53:08,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9607,2024-01-30 13:45:58,2024-01-30 13:45:40,False,{'log': 'DISCONNECTED cameras: 1'}
+9607,2024-01-30 13:50:58,2024-01-30 13:50:40,False,{'log': 'DISCONNECTED cameras: 1'}
 9608,2024-01-30 12:53:58,2024-01-30 12:53:43,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
 9608,2024-01-30 12:54:08,2024-01-30 12:53:54,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
 9608,2024-01-30 12:54:29,2024-01-30 12:54:15,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
@@ -769,4 +830,18 @@ Unidad,Fecha_subida,Timestamp,Error,Log
 9608,2024-01-30 13:42:08,2024-01-30 13:41:53,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
 9608,2024-01-30 13:43:47,2024-01-30 13:43:32,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
 9608,2024-01-30 13:43:53,2024-01-30 13:43:38,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
-9612,2024-01-30 12:44:45,2024-01-30 12:44:19,False,{'log': ''}
+9608,2024-01-30 13:44:42,2024-01-30 13:44:28,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9608,2024-01-30 13:44:49,2024-01-30 13:44:34,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9608,2024-01-30 13:46:12,2024-01-30 13:45:58,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9608,2024-01-30 13:46:17,2024-01-30 13:46:03,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9608,2024-01-30 13:47:48,2024-01-30 13:47:34,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9608,2024-01-30 13:47:54,2024-01-30 13:47:40,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9608,2024-01-30 13:48:36,2024-01-30 13:48:21,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9608,2024-01-30 13:48:41,2024-01-30 13:48:27,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9608,2024-01-30 13:49:40,2024-01-30 13:49:25,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9608,2024-01-30 13:49:46,2024-01-30 13:49:32,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9608,2024-01-30 13:50:38,2024-01-30 13:50:24,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9608,2024-01-30 13:50:45,2024-01-30 13:50:29,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9608,2024-01-30 13:52:23,2024-01-30 13:52:08,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
+9608,2024-01-30 13:52:30,2024-01-30 13:52:15,False,{'log': 'Batch dropping disabled. Delay: 0s.'}
+9608,2024-01-30 13:53:57,2024-01-30 13:53:42,False,{'log': 'Batch dropping enabled. Delay: 6s.'}
