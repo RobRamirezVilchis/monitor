@@ -92,6 +92,8 @@ def main():
             row = [unit, units_most_errors[unit]] + [len(p) for p in problems] + [others]
             categories.loc[len(categories.index)] = row
 
+        print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
+
         print("\nUnidades con más de 10 errores en la última hora:")
         print(categories.to_string(index=False))
 
