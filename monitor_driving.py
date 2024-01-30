@@ -38,7 +38,7 @@ def main():
         worst_ten_units = errors_per_unit.iloc[:10]
 
         # Guardar las 10 unidades que arrojan más errores, y cuántos son
-        file_name = f"/home/spare/Documents/script/most_errors.csv"
+        file_name = f"./most_errors.csv"
         file_exists = os.path.isfile(file_name)
         field_names = ['Inicio', 'Fin']
         fin = datetime.now().isoformat(timespec='seconds')
@@ -86,7 +86,7 @@ def main():
                 execution_number = list(last_restarts["Log"].apply(lambda x: x.split()[4]).astype(int))[-1]
                 restart_time = last_restarts.iloc[-1]["Timestamp"]
                 if execution_number > 1:
-                    restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, restart_time.isoformat(timespec="seconds")]
+                    restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, restart_time.isoformat()]
 
     
             row = [unit, units_most_errors[unit]] + [len(p) for p in problems] + [others]
@@ -102,11 +102,14 @@ def main():
                         "Status_pendientes"]].to_string(index=False))
         
         print("\nUnidades en ciclo de restart en los últimos 10 minutos:")
-        print(restarting_units.to_string(index=False))
-        print("\n" + "#"*80)
+        if restarting_units.empty:
+            print("No hay unidades con restarts")
+        else:
+            print(restarting_units.to_string(index=False))
+        print("\n" + "#"*80 + "\n\n")
 
 
-        time.sleep(1200)
+        time.sleep(600)
 
 
 
