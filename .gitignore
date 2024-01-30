@@ -1,5 +1,3 @@
-<<<<<<< HEAD
 env/
-=======
-env/
->>>>>>> c7a72f61d258405082def3475b3960469fe4be8f
+output/
+no_dropping.csv
