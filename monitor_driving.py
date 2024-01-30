@@ -7,6 +7,29 @@ from datetime import timedelta
 import transpais_logs
 import time
 
+def save_worst_ten(file_name, df):
+     # Guardar las 10 unidades que arrojan más errores, y cuántos son
+    file_name = f"./most_errors.csv"
+    file_exists = os.path.isfile(file_name)
+    field_names = ['Inicio', 'Fin']
+    fin = datetime.now().isoformat(timespec='seconds')
+    inicio = (datetime.now() - timedelta(minutes=interval)).isoformat(timespec='seconds')
+    line = [inicio, fin]
+    for n in range(1,11):
+        field_names.append(f'Unidad_{n}')
+        field_names.append(f'n_errores_{n}')
+        line.append(df.index[n-1])
+        line.append(df.iloc[n-1])
+
+
+    with open(file_name, mode="a", encoding="utf-8") as output_file:
+        writer = csv.writer(output_file)
+        if not file_exists:
+            writer.writeheader()
+
+        writer.writerow(line)
+        output_file.close()
+
 def main():
     interval = 60 # Minutes
     while True:
@@ -37,28 +60,7 @@ def main():
         units_most_errors = pd.Series(errors_per_unit[errors_per_unit > 10])
         worst_ten_units = errors_per_unit.iloc[:10]
 
-        # Guardar las 10 unidades que arrojan más errores, y cuántos son
-        file_name = f"./most_errors.csv"
-        file_exists = os.path.isfile(file_name)
-        field_names = ['Inicio', 'Fin']
-        fin = datetime.now().isoformat(timespec='seconds')
-        inicio = (datetime.now() - timedelta(minutes=interval)).isoformat(timespec='seconds')
-        line = [inicio, fin]
-        for n in range(1,11):
-            field_names.append(f'Unidad_{n}')
-            field_names.append(f'n_errores_{n}')
-            line.append(worst_ten_units.index[n-1])
-            line.append(worst_ten_units.iloc[n-1])
-
-
-        with open(file_name, mode="a", encoding="utf-8") as output_file:
-            writer = csv.writer(output_file)
-            if not file_exists:
-                writer.writeheader()
-
-            writer.writerow(line)
-            output_file.close()
-    
+        save_worst_ten(worst_ten_units)
 
         
         categories = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboots/Val", "SourceIDs", 
@@ -106,7 +108,7 @@ def main():
             print("No hay unidades con restarts")
         else:
             print(restarting_units.to_string(index=False))
-        print("\n" + "#"*80 + "\n\n")
+        print("\n" + "#"*80 + "\n\n\n")
 
 
         time.sleep(600)
