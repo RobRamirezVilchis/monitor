@@ -60,9 +60,9 @@ def main():
             output_file.close()
     
 
-        print("\nUnidades con más de 10 errores en la última hora:")
+        
         categories = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboots/Val", "SourceIDs", 
-                                           "Camera connection", "Partition/Storage","Others"])
+                                           "Camera connection", "Partition/Storage","Forced reboot","Others"])
         restarting_units = pd.DataFrame(columns=["Unidad", "Restarts", "Último restart"])
 
         for unit in units_most_errors.index:
@@ -74,9 +74,9 @@ def main():
             source_ids = unit_logs.loc[unit_logs["Log"].str.contains("Source id")]
             camera_connection = unit_logs.loc[unit_logs["Log"].str.contains("cameras")]
             partition = unit_logs.loc[unit_logs["Log"].str.contains("FORMATTING PARTITION") | unit_logs["Log"].str.contains("NO STORAGE DEVICE FOUND")]
-            # validation = unit_logs.loc[unit_logs["Log"].str.contains("Data validation failed")]
+            forced = unit_logs.loc[unit_logs["Log"] == "forced_reboot"]
 
-            problems = [total_restarts, reboots, source_ids, camera_connection, partition] # validation]
+            problems = [total_restarts, reboots, source_ids, camera_connection, partition, forced] # validation]
             sum_categories = sum([len(p) for p in problems])
             others = len(unit_logs) - sum_categories
 
@@ -92,9 +92,13 @@ def main():
             row = [unit, units_most_errors[unit]] + [len(p) for p in problems] + [others]
             categories.loc[len(categories.index)] = row
 
+        print("\nUnidades con más de 10 errores en la última hora:")
         print(categories.to_string(index=False))
+
         print("\nUnidades con más de 1000 logs pendientes:")
-        print(critical[["Unidad", "Ultima_actualizacion", "Eventos_pendientes", "Status_pendientes"]].to_string(index=False))
+        print(critical[["Unidad", "Ultima_actualizacion", "Eventos_pendientes", 
+                        "Status_pendientes"]].to_string(index=False))
+        
         print("\nUnidades en ciclo de restart en los últimos 10 minutos:")
         if restarting_units.empty:
             print("No hay unidades con restarts")

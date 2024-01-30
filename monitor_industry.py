@@ -36,8 +36,8 @@ def get_data(client, credentials, hours=1, minutes=0):
         "initial_datetime": (datetime.now() - timedelta(hours=hours, minutes=minutes)).isoformat(timespec="seconds")
     }
 
-    response = requests.get(status_url, headers={"Authorization": f'Token {token}'}, data=time_interval).json()
-    return response
+    response = requests.get(status_url, headers={"Authorization": f'Token {token}'}, data=time_interval)
+    return response.json()
 
 
 def main():
@@ -46,20 +46,23 @@ def main():
         print(f'Hora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
         for client in clients:
             delay_found = False
-            try:
-                response = get_data(client, credentials)
-            except:
-                print("Error conectando a DB")
-                continue
+            #try:
+            response = get_data(client, credentials)
 
+            '''except:
+                print("Error conectando a DB")
+                continue'''
+            #print(response)
             for device, logs in response.items():
+                
                 last_register_time = datetime.fromisoformat(logs[0]["register_time"][:-1])
                 time_since_log = datetime.now() - (last_register_time - timedelta(hours=6))
+                
                 if time_since_log > timedelta(minutes=11):
                     delay = str(time_since_log-timedelta(minutes=10)).split('.')[0]
                     print(f'{client_names[client]} {device} delayed by {delay}')
                     delay_found = True
-
+                                
                 log = logs[0]["log"]
                 if not log == "":
                     print(f"{client_names[client]} {device} log: {log}")
