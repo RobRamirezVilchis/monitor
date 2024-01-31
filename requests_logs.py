@@ -98,15 +98,14 @@ def main():
 
     for unit in units_most_errors.index:
         unit_logs = logs_no_dropping[logs_no_dropping["Unidad"] == unit]
-        print(unit_logs)
+
         # Categorización de logs
-        reboots = unit_logs.loc[(unit_logs["Log"] == "reboot") | (unit_logs["Log"] == "start") | 
-                                (unit_logs["Log"] == "data_validation")]
-        total_restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number:")]
-        source_ids = unit_logs.loc[unit_logs["Log"].str.contains("Source id")]
-        camera_connection = unit_logs.loc[unit_logs["Log"].str.contains("cameras")]
-        partition = unit_logs.loc[unit_logs["Log"].str.contains("FORMATTING PARTITION") | 
-                                  unit_logs["Log"].str.contains("NO STORAGE DEVICE FOUND")]
+        reboots = unit_logs.loc[(unit_logs["Tipo"] == "reboot") | (unit_logs["Tipo"] == "start") | 
+                                (unit_logs["Tipo"] == "data_validation")]
+        total_restarts = unit_logs.loc[unit_logs["Tipo"] == "restart"]
+        source_ids = unit_logs.loc[unit_logs["Tipo"] == "source_missing"]
+        camera_connection = unit_logs.loc[unit_logs["Tipo"] == "camera_missing"]
+        partition = unit_logs.loc[unit_logs["Tipo"] == "storage_devices"]
         forced = unit_logs.loc[unit_logs["Log"] == "forced_reboot"]
 
         problems = [total_restarts, reboots, source_ids, camera_connection, partition, forced] # validation]
