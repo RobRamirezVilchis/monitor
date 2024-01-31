@@ -3,5 +3,7 @@ output/
 no_dropping.csv
 most_errors.csv
 .env
+
 driving.json
 delays.json
+industry_logs.json
