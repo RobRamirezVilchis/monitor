@@ -41,7 +41,14 @@ def get_data(client, credentials, hours=1, minutes=0):
 
 
 def main():
-    recent_delays = {c: [] for c in clients}
+    
+    if os.path.isdir("delays.json"):
+        with open("delays.json", "r") as file:
+            recent_delays = json.loads(file)
+    else:
+        recent_delays = {c: [] for c in clients}
+    print(recent_delays)
+
     last_delay = {c: datetime.min for c in clients}
 
     while True:
@@ -73,7 +80,7 @@ def main():
 
                     
                     if (datetime.now() - last_delay[client]) > timedelta(minutes=11):
-                        recent_delays[client].append(datetime.now())
+                        recent_delays[client].append(datetime.now().isoformat())
 
                     last_delay[client] = datetime.now()
                                 
@@ -81,7 +88,11 @@ def main():
                 if not log == "":
                     print(f"{client_names[client]} {device} log: {log}")
             
-            recent_delays[client] = [r for r in recent_delays[client] if (datetime.now() - r) < timedelta(hours=24)]
+            recent_delays[client] = [r for r in recent_delays[client] 
+                                     if (datetime.now() - datetime.fromisoformat(r)) < timedelta(hours=24)]
+            
+            with open("delays.json", "w") as file:
+                json.dump(recent_delays, file, ensure_ascii=False)
 
             if not delay_found:
                 print(f'{client_names[client]} sin retrasos ({len(recent_delays[client])} en las últimas 24h)')
