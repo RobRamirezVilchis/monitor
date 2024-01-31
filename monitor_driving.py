@@ -110,8 +110,8 @@ def main():
             print(categories.to_string(index=False), file=f)
 
             print("\nUnidades con más de 1000 logs pendientes:", file=f)
-            print(critical[["Unidad", "Ultima_actualizacion", "Jsons_eventos_pendientes", 
-                            "Jsons_status_pendientes"]].to_string(index=False), file=f)
+            print(critical[["Unidad", "Ultima_actualizacion", "Eventos_pendientes", 
+                            "Status_pendientes"]].to_string(index=False), file=f)
             
             print("\nUnidades en ciclo de restart en los últimos 10 minutos:", file=f)
             if restarting_units.empty:
