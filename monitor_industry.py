@@ -44,7 +44,7 @@ def main():
     
     if os.path.isfile("delays.json"):
         with open("delays.json", "r") as file:
-            recent_delays = json.loads(file)
+            recent_delays = json.load(file)
     else:
         recent_delays = {c: [] for c in clients}
 
