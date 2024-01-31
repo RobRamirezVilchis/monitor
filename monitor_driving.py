@@ -63,9 +63,10 @@ def main():
         errors_per_unit = logs_no_dropping["Unidad"].value_counts()
 
         units_most_errors = pd.Series(errors_per_unit[errors_per_unit > 10])
-        worst_ten_units = errors_per_unit.iloc[:10]
 
-        save_worst_ten(worst_ten_units)
+        if len(errors_per_unit) > 10:
+            worst_ten_units = errors_per_unit.iloc[:10]
+            save_worst_ten(worst_ten_units)
 
         
         categories = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboots/Val", "SourceIDs", 

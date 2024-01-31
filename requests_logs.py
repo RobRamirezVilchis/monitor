@@ -23,7 +23,7 @@ def login():
 
 def make_request():
     headers = {"Authorization": f"Token {token}"}
-    r = requests.get("https://tp.introid.com/logs/", headers=headers)
+    r = requests.get("https://tp.introid.com/logs/", data={"minutes": 60}, headers=headers)
     # print(r.status_code)
     # print(r.text)
     
@@ -62,7 +62,7 @@ def main():
         response, status = make_request()
     # data = json.loads(response)
     # response keys = {"logs": [...], "devices": [...]}
-    
+    global interval
     interval = 30
     logs = response["logs"]
     devices = response["devices"]
@@ -76,7 +76,9 @@ def main():
     critical = df_devices.loc[(df_devices["Jsons_eventos_pendientes"] > 1000) | 
                               (df_devices["Jsons_status_pendientes"] > 1000)]
     
-    logs_no_dropping = df_logs.loc[df_logs["Log"].str.contains("Batch dropping").apply(lambda x: not x)]
+    logs_last_hour = df_logs[df_logs["Timestamp"] > (datetime.now()-timedelta(minutes=61))]
+
+    logs_no_dropping = logs_last_hour.loc[logs_last_hour["Log"].str.contains("Batch dropping").apply(lambda x: not x)]
         
     # Quitar logs que sólo sean ''}
     logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Log"] == "{'log': ''}").apply(lambda x: not x)]
