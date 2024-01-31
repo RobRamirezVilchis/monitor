@@ -47,7 +47,6 @@ def main():
             recent_delays = json.loads(file)
     else:
         recent_delays = {c: [] for c in clients}
-    print(recent_delays)
 
     last_delay = {c: datetime.min for c in clients}
 
