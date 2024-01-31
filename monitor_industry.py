@@ -42,7 +42,7 @@ def get_data(client, credentials, hours=1, minutes=0):
 
 def main():
     
-    if os.path.isdir("delays.json"):
+    if os.path.isfile("delays.json"):
         with open("delays.json", "r") as file:
             recent_delays = json.loads(file)
     else:
