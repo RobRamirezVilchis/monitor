@@ -93,6 +93,7 @@ def main():
             last_restarts = total_restarts[total_restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
             
             if not last_restarts.empty:
+                
                 execution_number = list(last_restarts["Log"].apply(lambda x: x.split()[4]).astype(int))[-1]
                 restart_time = last_restarts.iloc[-1]["Timestamp"]
                 if execution_number > 1:

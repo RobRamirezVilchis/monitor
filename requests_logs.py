@@ -84,61 +84,75 @@ def main():
     logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Log"] == "{'log': ''}").apply(lambda x: not x)]
     logs_no_dropping.to_csv("no_dropping.csv")
 
+    aux = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Aux"]
+    ignition = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Ignición"]
+
+    logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Tipo"] != "Aux") & (logs_no_dropping["Tipo"] != "Ignición")]
+
+
     errors_per_unit = logs_no_dropping["Unidad"].value_counts()
 
     units_most_errors = pd.Series(errors_per_unit[errors_per_unit > 10])
-    worst_ten_units = errors_per_unit.iloc[:10]
 
+    worst_ten_units = errors_per_unit.iloc[:10]
     save_worst_ten(worst_ten_units)
 
-    
-    categories = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboots/Val", "SourceIDs", 
+    categories = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboot/Val", "SourceIDs", 
                                         "Camera connection", "Partition/Storage", "Forced reboot","Others"])
     restarting_units = pd.DataFrame(columns=["Unidad", "Restarts", "Último restart"])
 
-    for unit in units_most_errors.index:
+
+    types_to_check = ["reboot", "start", "data_validation", "restart", "source_missing", 
+                      "camera_missing", "storage_devices", "forced_reboot"]
+    for unit in errors_per_unit.index:
         unit_logs = logs_no_dropping[logs_no_dropping["Unidad"] == unit]
 
         # Categorización de logs
-        reboots = unit_logs.loc[(unit_logs["Tipo"] == "reboot") | (unit_logs["Tipo"] == "start") | 
-                                (unit_logs["Tipo"] == "data_validation")]
-        total_restarts = unit_logs.loc[unit_logs["Tipo"] == "restart"]
-        source_ids = unit_logs.loc[unit_logs["Tipo"] == "source_missing"]
-        camera_connection = unit_logs.loc[unit_logs["Tipo"] == "camera_missing"]
-        partition = unit_logs.loc[unit_logs["Tipo"] == "storage_devices"]
-        forced = unit_logs.loc[unit_logs["Log"] == "forced_reboot"]
 
-        problems = [total_restarts, reboots, source_ids, camera_connection, partition, forced] # validation]
-        sum_categories = sum([len(p) for p in problems])
+        conditions = {
+            "reboots": unit_logs["Tipo"].isin(["reboot", "start", "data_validation"]),
+            "restarts": unit_logs["Tipo"] == "restart",
+            "source_ids": unit_logs["Tipo"] == "source_missing",
+            "camera_connection": unit_logs["Tipo"] == "camera_missing",
+            "partition": unit_logs["Tipo"] == "storage_devices",
+            "forced": unit_logs["Log"] == "forced_reboot"
+        }
+
+        result_dict = {key: unit_logs[condition] for key, condition in conditions.items()}
+
+        sum_categories = sum([len(lis) for n, lis in result_dict.items()])
         others = len(unit_logs) - sum_categories
 
-        last_restarts = total_restarts[total_restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
-        
+        if errors_per_unit[unit] > 10:
+            row = [unit, units_most_errors[unit]] + [len(lis) for n, lis in result_dict.items()] + [others]
+            categories.loc[len(categories.index)] = row
+
+        restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number")]
+        last_restarts = restarts[restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
         if not last_restarts.empty:
             execution_number = list(last_restarts["Log"].apply(lambda x: x.split()[4]).astype(int))[-1]
             restart_time = last_restarts.iloc[-1]["Timestamp"]
             if execution_number > 1:
                 restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, 
-                                                                     restart_time.isoformat(timespec="seconds")]
+                                                                        restart_time.isoformat(timespec="seconds")]
 
+    with open("status_driving.txt", "w") as f:
+        print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        
 
-        row = [unit, units_most_errors[unit]] + [len(p) for p in problems] + [others]
-        categories.loc[len(categories.index)] = row
+        print("\nUnidades con más de 10 errores en la última hora:", file=f)
+        print(categories.to_string(index=False), file=f)
 
-    print("\nUnidades con más de 10 errores en la última hora:")
-    print(categories.to_string(index=False))
+        print("\nUnidades con más de 1000 logs pendientes:", file=f)
+        print(critical[["Unidad", "Ultima_actualizacion", "Jsons_eventos_pendientes", 
+                        "Jsons_status_pendientes"]].to_string(index=False), file=f)
+        
+        print("\nUnidades en ciclo de restart en los últimos 10 minutos:", file=f)
+        if restarting_units.empty:
+            print("No hay unidades con restarts", file=f)
+        else:
+            print(restarting_units.to_string(index=False), file=f)
 
-    print("\nUnidades con más de 1000 logs pendientes:")
-    print(critical[["Unidad", "Ultima_actualizacion", "Jsons_eventos_pendientes", 
-                    "Jsons_status_pendientes"]].to_string(index=False))
-    
-    print("\nUnidades en ciclo de restart en los últimos 10 minutos:")
-    if restarting_units.empty:
-        print("No hay unidades con restarts")
-    else:
-        print(restarting_units.to_string(index=False))
-
-    print("\n" + "#"*80 + "\n\n")
+        print("\n" + "#"*80 + "\n\n")
 
     with open("driving.json", "w") as file:
         json.dump(response, file, ensure_ascii=False)
