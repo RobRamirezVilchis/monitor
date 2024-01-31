@@ -103,20 +103,21 @@ def main():
             row = [unit, units_most_errors[unit]] + [len(p) for p in problems] + [others]
             categories.loc[len(categories.index)] = row
 
-        print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
+        with open("status_driving.txt", "w") as f:
+            print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        
 
-        print("\nUnidades con más de 10 errores en la última hora:")
-        print(categories.to_string(index=False))
+            print("\nUnidades con más de 10 errores en la última hora:", file=f)
+            print(categories.to_string(index=False), file=f)
 
-        print("\nUnidades con más de 1000 logs pendientes:")
-        print(critical[["Unidad", "Ultima_actualizacion", "Eventos_pendientes", 
-                        "Status_pendientes"]].to_string(index=False))
-        
-        print("\nUnidades en ciclo de restart en los últimos 10 minutos:")
-        if restarting_units.empty:
-            print("No hay unidades con restarts")
-        else:
-            print(restarting_units.to_string(index=False))
+            print("\nUnidades con más de 1000 logs pendientes:", file=f)
+            print(critical[["Unidad", "Ultima_actualizacion", "Jsons_eventos_pendientes", 
+                            "Jsons_status_pendientes"]].to_string(index=False), file=f)
+            
+            print("\nUnidades en ciclo de restart en los últimos 10 minutos:", file=f)
+            if restarting_units.empty:
+                print("No hay unidades con restarts", file=f)
+            else:
+                print(restarting_units.to_string(index=False), file=f)
         print("\n" + "#"*80 + "\n\n\n")
 
 
