@@ -109,7 +109,7 @@ def main():
             recent_delays[client] = [r for r in recent_delays[client] 
                                      if (datetime.now() - datetime.fromisoformat(r)) < timedelta(hours=24)]
 
-            with open("delays.json", "w") as file:
+            with open("./output/delays.json", "w") as file:
                 json.dump(recent_delays, file, ensure_ascii=False)
 
             if not delay_found:
@@ -120,7 +120,7 @@ def main():
             for l in logs_to_print:
                 print(l)
 
-        with open("industry_logs.json", "w") as file:
+        with open("./output/industry_logs.json", "w") as file:
             json.dump(all_responses, file, ensure_ascii=False)
 
         print("\n")

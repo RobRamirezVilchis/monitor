@@ -32,7 +32,7 @@ def make_request():
 
 def save_worst_ten(df):
      # Guardar las 10 unidades que arrojan más errores, y cuántos son
-    file_name = f"./most_errors.csv"
+    file_name = f"./output/most_errors.csv"
     file_exists = os.path.isfile(file_name)
     field_names = ['Inicio', 'Fin']
     fin = datetime.now().isoformat()
@@ -48,7 +48,7 @@ def save_worst_ten(df):
     with open(file_name, mode="a", encoding="utf-8") as output_file:
         writer = csv.writer(output_file)
         if not file_exists:
-            writer.writeheader()
+            writer.writerow(field_names)
 
         writer.writerow(line)
         output_file.close()
@@ -82,7 +82,7 @@ def main():
         
     # Quitar logs que sólo sean ''}
     logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Log"] == "{'log': ''}").apply(lambda x: not x)]
-    logs_no_dropping.to_csv("no_dropping.csv")
+    logs_no_dropping.to_csv("./output/no_dropping.csv")
 
     aux = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Aux"]
     ignitions = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Ignición"]
@@ -132,10 +132,10 @@ def main():
 
 
         sum_categories = sum([len(lis) for n, lis in categories.items()])
-        others = len(unit_logs) - sum_categories
+        others = len(unit_logs) - sum_categories - len(forgiven_restarts)
 
         if errors_per_unit[unit] > 10:
-            row = [unit, units_most_errors[unit]] + [len(lis) for n, lis in categories.items()] + [others]
+            row = [unit, units_most_errors[unit]-len(forgiven_restarts)] + [len(lis) for n, lis in categories.items()] + [others]
             categories_df.loc[len(categories_df.index)] = row
 
         restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number")]
@@ -165,7 +165,8 @@ def main():
 
         print("\n" + "#"*80 + "\n\n")
 
-    with open("driving.json", "w") as file:
+
+    with open("./output/driving_logs.json", "w") as file:
         json.dump(response, file, ensure_ascii=False)
 
     time.sleep(1200)
