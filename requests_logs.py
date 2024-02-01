@@ -35,8 +35,8 @@ def save_worst_ten(df):
     file_name = f"./most_errors.csv"
     file_exists = os.path.isfile(file_name)
     field_names = ['Inicio', 'Fin']
-    fin = datetime.now().isoformat(timespec='seconds')
-    inicio = (datetime.now() - timedelta(minutes=interval)).isoformat(timespec='seconds')
+    fin = datetime.now().isoformat()
+    inicio = (datetime.now() - timedelta(minutes=interval)).isoformat()
     line = [inicio, fin]
     for n in range(1,11):
         field_names.append(f'Unidad_{n}')
@@ -134,7 +134,7 @@ def main():
             restart_time = last_restarts.iloc[-1]["Timestamp"]
             if execution_number > 1:
                 restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, 
-                                                                        restart_time.isoformat(timespec="seconds")]
+                                                                        restart_time.isoformat()]
 
     with open("status_driving.txt", "w") as f:
         print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        
