@@ -37,6 +37,7 @@ def get_data(client, credentials, hours=1, minutes=0):
     }
 
     response = requests.get(status_url, headers={"Authorization": f'Token {token}'}, data=time_interval)
+    
     return response.json()
 
 
@@ -104,7 +105,6 @@ def main():
                 log = logs[0]["log"]
                 if not log == "":
                     logs_to_print.append(f"{client_names[client]} {device} log: {log}")
-                    print(f"{client_names[client]} {device} log: {log}")
             
             recent_delays[client] = [r for r in recent_delays[client] 
                                      if (datetime.now() - datetime.fromisoformat(r)) < timedelta(hours=24)]
