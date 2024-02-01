@@ -98,7 +98,7 @@ def main():
 
     categories_df = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboot/Val", "SourceIDs", 
                                         "Camera connection", "Partition/Storage", "Forced reboot","Others"])
-    restarting_units = pd.DataFrame(columns=["Unidad", "Restarts", "Último restart"])
+    restarting_units = pd.DataFrame(columns=["Unidad", "Restarts", "Último restart", "Mensaje"])
 
     for unit in errors_per_unit.index:
         unit_logs = logs_no_dropping[logs_no_dropping["Unidad"] == unit]
@@ -140,12 +140,16 @@ def main():
 
         restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number")]
         last_restarts = restarts[restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
+
         if not last_restarts.empty:
             execution_number = list(last_restarts["Log"].apply(lambda x: x.split()[4]).astype(int))[-1]
             restart_time = last_restarts.iloc[-1]["Timestamp"]
+
             if execution_number > 1:
+                message = last_restarts.iloc[-1]["Log"].split("\\n\\n")[-1].split("\\n")[0]
+                print(message)
                 restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, 
-                                                                        restart_time.isoformat()]
+                                                                        restart_time.isoformat(), message]
 
     with open("status_driving.txt", "w") as f:
         print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        

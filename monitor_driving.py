@@ -95,8 +95,10 @@ def main():
             if not last_restarts.empty:
                 
                 execution_number = list(last_restarts["Log"].apply(lambda x: x.split()[4]).astype(int))[-1]
+                
                 restart_time = last_restarts.iloc[-1]["Timestamp"]
                 if execution_number > 1:
+                    
                     restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, restart_time.isoformat()]
 
     
