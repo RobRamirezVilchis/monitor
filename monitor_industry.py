@@ -58,6 +58,7 @@ def main():
 
         for client in clients:
             delay_found = False
+            logs_to_print = []
             try:
                 response = get_data(client, credentials)
             except:
@@ -71,7 +72,6 @@ def main():
 
 
             for device, logs in response.items():
-                
                 last_register_time = datetime.fromisoformat(logs[0]["register_time"][:-1])
                 penul_register_time = datetime.fromisoformat(logs[1]["register_time"][:-1])
                 time_since_log = datetime.now() - (last_register_time - timedelta(hours=6))
@@ -84,7 +84,7 @@ def main():
                     delay_found = True
 
                     # Si el delay no está registrado aún, registrarlo
-                    if recent_delays[client] == [] or recent_delays[client][-1] != last_register_time.isoformat():
+                    if recent_delays[client] == [] or recent_delays[client][-1] != last_register_time.isoformat(timespec='minutes'):
                         recent_delays[client].append(last_register_time.isoformat(timespec='minutes'))
 
                     last_delay[client] = datetime.now()
@@ -93,7 +93,7 @@ def main():
                 elif prev_time_gap > timedelta(minutes=11):
                     delay = str((prev_time_gap - timedelta(minutes=10))).split('.')[0]
                     print(f'{client_names[client]} {device} se atrasó por {delay}')
-                    
+
                     # Si el delay no está registrado aún, registrarlo
                     if recent_delays[client] == [] or recent_delays[client][-1] != penul_register_time.isoformat(timespec='minutes'):
                         recent_delays[client].append(penul_register_time.isoformat(timespec='minutes'))
@@ -103,6 +103,7 @@ def main():
                                 
                 log = logs[0]["log"]
                 if not log == "":
+                    logs_to_print.append(f"{client_names[client]} {device} log: {log}")
                     print(f"{client_names[client]} {device} log: {log}")
             
             recent_delays[client] = [r for r in recent_delays[client] 
@@ -113,6 +114,11 @@ def main():
 
             if not delay_found:
                 print(f'{client_names[client]} sin retrasos ({len(recent_delays[client])} en las últimas 24h)')
+
+        if not logs_to_print == []:
+            print("\n")
+            for l in logs_to_print:
+                print(l)
 
         with open("industry_logs.json", "w") as file:
             json.dump(all_responses, file, ensure_ascii=False)
