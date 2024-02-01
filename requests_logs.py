@@ -146,7 +146,7 @@ def main():
             restart_time = last_restarts.iloc[-1]["Timestamp"]
 
             if execution_number > 1:
-                message = last_restarts.iloc[-1]["Log"].split("\\n\\n")[-1].split("\\n")[0]
+                message = last_restarts.iloc[-1]["Log"].split("\\n\\n")[-1].split("\\n")[0].strip()
                 print(message)
                 restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, 
                                                                         restart_time.isoformat(), message]
