@@ -85,47 +85,58 @@ def main():
     logs_no_dropping.to_csv("no_dropping.csv")
 
     aux = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Aux"]
-    ignition = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Ignición"]
+    ignitions = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Ignición"]
 
     logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Tipo"] != "Aux") & (logs_no_dropping["Tipo"] != "Ignición")]
 
 
     errors_per_unit = logs_no_dropping["Unidad"].value_counts()
-
     units_most_errors = pd.Series(errors_per_unit[errors_per_unit > 10])
 
     worst_ten_units = errors_per_unit.iloc[:10]
     save_worst_ten(worst_ten_units)
 
-    categories = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboot/Val", "SourceIDs", 
+    categories_df = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboot/Val", "SourceIDs", 
                                         "Camera connection", "Partition/Storage", "Forced reboot","Others"])
     restarting_units = pd.DataFrame(columns=["Unidad", "Restarts", "Último restart"])
 
-
-    types_to_check = ["reboot", "start", "data_validation", "restart", "source_missing", 
-                      "camera_missing", "storage_devices", "forced_reboot"]
     for unit in errors_per_unit.index:
         unit_logs = logs_no_dropping[logs_no_dropping["Unidad"] == unit]
+        unit_ignitions = ignitions[ignitions["Unidad"] == unit]
+        aux_ignitions = aux[aux["Unidad"] == unit]
 
         # Categorización de logs
-
         conditions = {
-            "reboots": unit_logs["Tipo"].isin(["reboot", "start", "data_validation"]),
             "restarts": unit_logs["Tipo"] == "restart",
+            "reboots": unit_logs["Tipo"].isin(["reboot", "start", "data_validation"]),
             "source_ids": unit_logs["Tipo"] == "source_missing",
             "camera_connection": unit_logs["Tipo"] == "camera_missing",
             "partition": unit_logs["Tipo"] == "storage_devices",
             "forced": unit_logs["Log"] == "forced_reboot"
         }
 
-        result_dict = {key: unit_logs[condition] for key, condition in conditions.items()}
+        categories = {key: unit_logs[condition] for key, condition in conditions.items()}
 
-        sum_categories = sum([len(lis) for n, lis in result_dict.items()])
+
+        # Checar qué restarts fueron justo después de una ignición (5 minutos)
+        restart_times = categories["restarts"]["Timestamp"]
+        ignition_times = unit_ignitions["Timestamp"]
+        forgiven_restarts = set([])
+        for t in restart_times.index:
+            for i in ignition_times.index:
+                if (ignition_times[i] + timedelta(minutes=5)) > restart_times[t] > ignition_times[i]:
+                    forgiven_restarts.add(t)
+
+        # Descartar restarts en la ventana de 5 minutos
+        categories["restarts"] = categories["restarts"].drop(forgiven_restarts)
+
+
+        sum_categories = sum([len(lis) for n, lis in categories.items()])
         others = len(unit_logs) - sum_categories
 
         if errors_per_unit[unit] > 10:
-            row = [unit, units_most_errors[unit]] + [len(lis) for n, lis in result_dict.items()] + [others]
-            categories.loc[len(categories.index)] = row
+            row = [unit, units_most_errors[unit]] + [len(lis) for n, lis in categories.items()] + [others]
+            categories_df.loc[len(categories_df.index)] = row
 
         restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number")]
         last_restarts = restarts[restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
@@ -140,7 +151,7 @@ def main():
         print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        
 
         print("\nUnidades con más de 10 errores en la última hora:", file=f)
-        print(categories.to_string(index=False), file=f)
+        print(categories_df.to_string(index=False), file=f)
 
         print("\nUnidades con más de 1000 logs pendientes:", file=f)
         print(critical[["Unidad", "Ultima_actualizacion", "Jsons_eventos_pendientes", 
