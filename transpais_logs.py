@@ -44,7 +44,7 @@ def save_to_csv(data, filename, header=None):
 def get_data(minutes=10):
     
     current_date = datetime.datetime.now(tz=pytz.timezone("America/Monterrey")).replace(tzinfo=pytz.utc)
-    range_date = current_date - datetime.timedelta(minutes=minutes)
+    range_date = current_date - datetime.timedelta(days=1)
     
     initial_date = range_date.strftime("%Y-%m-%d")
     initial_datetime = range_date.strftime("%Y-%m-%d %H:%M:%S")

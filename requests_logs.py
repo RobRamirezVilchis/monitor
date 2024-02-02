@@ -173,8 +173,10 @@ def main():
     with open("./output/driving_logs.json", "w") as file:
         json.dump(response, file, ensure_ascii=False)
 
-    time.sleep(1200)
+    
     
     
 if __name__ == "__main__":
-    main()
+    while True:
+        main()
+        time.sleep(1200)
