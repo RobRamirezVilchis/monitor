@@ -20,7 +20,7 @@ def login():
         token = r.json()["token"]
     else:
         token = None
-        print(r.status_code)
+        print(f"Login error: {r.status_code}")
 
 
 def make_request():
@@ -182,6 +182,7 @@ def main():
             print("No hay unidades con restarts", file=f)
         else:
             print(restarting_units.to_string(index=False), file=f)
+        print("\n"*3)
 
         print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}') 
 
