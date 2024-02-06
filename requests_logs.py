@@ -28,8 +28,8 @@ def make_request():
     r = requests.get("https://tp.introid.com/logs/", data={"minutes": 60}, headers=headers)
     # print(r.status_code)
     # print(r.text)
-    if r.status_code == 200 or r.status_code == 201:
-        return r, r.status_code
+    return r, r.status_code
+    
 
 
 
