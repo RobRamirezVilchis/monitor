@@ -26,8 +26,9 @@ def make_request():
     r = requests.get("https://tp.introid.com/logs/", data={"minutes": 60}, headers=headers)
     # print(r.status_code)
     # print(r.text)
-    
-    return r.json(), r.status_code
+    if r.status_code == 200 or r.status_code == 201:
+        return r, r.status_code
+
 
 
 def save_worst_ten(df):
@@ -41,7 +42,7 @@ def save_worst_ten(df):
     for n in range(1,11):
         field_names.append(f'Unidad_{n}')
         field_names.append(f'n_errores_{n}')
-        if n-1 in df.index:
+        if n <= len(df.index):
             line.append(df.index[n-1])
             line.append(df.iloc[n-1])
         else:
@@ -63,8 +64,13 @@ def main():
     if status == 401:
         login()
         response, status = make_request()
-    # data = json.loads(response)
-    # response keys = {"logs": [...], "devices": [...]}
+    
+    if status == 200 or status == 201:
+        response = response.json()
+    else:
+        print(f"Status code: {status}")
+        return
+    
     global interval
     interval = 30
     logs = response["logs"]
@@ -169,7 +175,7 @@ def main():
         else:
             print(restarting_units.to_string(index=False), file=f)
 
-        print("\n" + "#"*80 + "\n\n")
+        print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}') 
 
 
     with open("./output/driving_logs.json", "w") as file:
