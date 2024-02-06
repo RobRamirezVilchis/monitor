@@ -41,8 +41,11 @@ def save_worst_ten(df):
     for n in range(1,11):
         field_names.append(f'Unidad_{n}')
         field_names.append(f'n_errores_{n}')
-        line.append(df.index[n-1])
-        line.append(df.iloc[n-1])
+        if n-1 in df.index:
+            line.append(df.index[n-1])
+            line.append(df.iloc[n-1])
+        else:
+            print(f"Index {n-1} Out of Range")
 
 
     with open(file_name, mode="a", encoding="utf-8") as output_file:
@@ -127,7 +130,7 @@ def main():
                 if (ignition_times[i] + timedelta(minutes=5)) > restart_times[t] > ignition_times[i]:
                     forgiven_restarts.add(t)
 
-        # Descartar restarts en la ventana de 5 minutos
+        # Descartar restarts en el intervalo de 5 minutos
         categories["restarts"] = categories["restarts"].drop(forgiven_restarts)
 
 
@@ -147,7 +150,6 @@ def main():
 
             if execution_number > 1:
                 message = last_restarts.iloc[-1]["Log"].split("\\n\\n")[-1].split("\\n")[0].strip()
-                print(message)
                 restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, 
                                                                         restart_time.isoformat(), message]
 
