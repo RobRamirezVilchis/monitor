@@ -8,11 +8,13 @@ import time
 
 def login():
     global token
+
     r = requests.post('https://tp.introid.com/login/',
                     data={
                         'username': 'arturo_admin',
                         'password': 'introid150325'
                     })
+    
     
     if r.status_code == 200 or r.status_code == 201:
         token = r.json()["token"]
@@ -59,7 +61,12 @@ def save_worst_ten(df):
     
     
 def main():
-    login()
+    try:
+        login()
+    except requests.exceptions.ConnectionError:
+        print("Connection error")
+        return
+
     response, status = make_request()
     if status == 401:
         login()
@@ -96,7 +103,8 @@ def main():
     aux = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Aux"]
     ignitions = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Ignición"]
 
-    logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Tipo"] != "Aux") & (logs_no_dropping["Tipo"] != "Ignición")]
+    logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Tipo"] != "Aux") & 
+                                            (logs_no_dropping["Tipo"] != "Ignición")]
 
 
     errors_per_unit = logs_no_dropping["Unidad"].value_counts()
