@@ -9,7 +9,7 @@ import time
 def login():
     global token
 
-    r = requests.post('https://tp.introid.com/login/',
+    r = requests.post('https://cmx.safe-d.aivat.io/login/',
                     data={
                         'username': 'arturo_admin',
                         'password': 'introid150325'
@@ -23,41 +23,12 @@ def login():
         print(f"Login error: {r.status_code}")
 
 
-def make_request():
+def make_request(minutes=60):
     headers = {"Authorization": f"Token {token}"}
-    r = requests.get("https://tp.introid.com/logs/", data={"minutes": 60}, headers=headers)
+    r = requests.get("https://cmx.safe-d.aivat.io/cemex/logs/", data={"minutes": minutes}, headers=headers)
     # print(r.status_code)
     # print(r.text)
     return r, r.status_code
-    
-
-
-
-def save_worst_ten(df):
-     # Guardar las 10 unidades que arrojan más errores, y cuántos son
-    file_name = f"./output/most_errors.csv"
-    file_exists = os.path.isfile(file_name)
-    field_names = ['Inicio', 'Fin']
-    fin = datetime.now().isoformat()
-    inicio = (datetime.now() - timedelta(minutes=interval)).isoformat()
-    line = [inicio, fin]
-    for n in range(1,11):
-        field_names.append(f'Unidad_{n}')
-        field_names.append(f'n_errores_{n}')
-        if n <= len(df.index):
-            line.append(df.index[n-1])
-            line.append(df.iloc[n-1])
-        else:
-            print(f"Index {n-1} Out of Range")
-
-
-    with open(file_name, mode="a", encoding="utf-8") as output_file:
-        writer = csv.writer(output_file)
-        if not file_exists:
-            writer.writerow(field_names)
-
-        writer.writerow(line)
-        output_file.close()
     
     
 def main():
@@ -67,10 +38,11 @@ def main():
         print("Connection error")
         return
 
-    response, status = make_request()
+    interval = 60 # Minutos
+    response, status = make_request(interval)
     if status == 401:
         login()
-        response, status = make_request()
+        response, status = make_request(interval)
     
     if status == 200 or status == 201:
         response = response.json()
@@ -78,8 +50,9 @@ def main():
         print(f"Status code: {status}")
         return
     
-    global interval
-    interval = 30
+    with open("./output/response_cemex.json", "w") as f:
+        json.dump(response, f)
+
     logs = response["logs"]
     devices = response["devices"]
     
@@ -88,17 +61,9 @@ def main():
 
     df_logs["Timestamp"] = df_logs["Timestamp"].apply(lambda x: datetime.fromisoformat(x))
     df_logs["Fecha_subida"] = df_logs["Fecha_subida"].apply(lambda x: datetime.fromisoformat(x))
-
-    critical = df_devices.loc[(df_devices["Jsons_eventos_pendientes"] > 1000) | 
-                              (df_devices["Jsons_status_pendientes"] > 1000)]
     
-    logs_last_hour = df_logs[df_logs["Timestamp"] > (datetime.now()-timedelta(minutes=61))]
 
-    logs_no_dropping = logs_last_hour.loc[logs_last_hour["Log"].str.contains("Batch dropping").apply(lambda x: not x)]
-        
-    # Quitar logs que sólo sean ''}
-    logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Log"] == "{'log': ''}").apply(lambda x: not x)]
-    logs_no_dropping.to_csv("./output/no_dropping.csv")
+    logs_no_dropping = df_logs.loc[df_logs["Log"].str.contains("Batch dropping").apply(lambda x: not x)]
 
     aux = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Aux"]
     ignitions = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Ignición"]
@@ -108,16 +73,20 @@ def main():
 
 
     errors_per_unit = logs_no_dropping["Unidad"].value_counts()
-    units_most_errors = pd.Series(errors_per_unit[errors_per_unit > 10])
 
-    worst_ten_units = errors_per_unit.iloc[:10]
-    save_worst_ten(worst_ten_units)
-
-    categories_df = pd.DataFrame(columns=["Unidad","Total", "Restarts", "Start/Reboot/Val", "SourceIDs", 
-                                        "Camera connection", "Partition/Storage", "Forced reboot","Others"])
+    categories_df = pd.DataFrame(columns=["Unidad", "Total", "Restarts", 
+                                          "Start/Reboot/Val", "SourceIDs", "Camera connection", 
+                                          "Partition/Storage", "Forced/Read only", "Others"])
+    
     restarting_units = pd.DataFrame(columns=["Unidad", "Restarts", "Último restart", "Mensaje"])
 
-    for unit in errors_per_unit.index:
+
+    for unit in df_devices["Unidad"]:
+        if unit not in errors_per_unit.index:
+            row = [unit] + [0]*8
+            categories_df.loc[len(categories_df.index)] = row
+            continue
+    
         unit_logs = logs_no_dropping[logs_no_dropping["Unidad"] == unit]
         unit_ignitions = ignitions[ignitions["Unidad"] == unit]
         aux_ignitions = aux[aux["Unidad"] == unit]
@@ -129,7 +98,7 @@ def main():
             "source_ids": unit_logs["Tipo"] == "source_missing",
             "camera_connection": unit_logs["Tipo"] == "camera_missing",
             "partition": unit_logs["Tipo"] == "storage_devices",
-            "forced": unit_logs["Log"] == "forced_reboot"
+            "forced": unit_logs["Tipo"].isin(["forced_reboot", "read_only_sdd"]),
         }
 
         categories = {key: unit_logs[condition] for key, condition in conditions.items()}
@@ -151,9 +120,8 @@ def main():
         sum_categories = sum([len(lis) for n, lis in categories.items()])
         others = len(unit_logs) - sum_categories - len(forgiven_restarts)
 
-        if errors_per_unit[unit] > 10:
-            row = [unit, units_most_errors[unit]-len(forgiven_restarts)] + [len(lis) for n, lis in categories.items()] + [others]
-            categories_df.loc[len(categories_df.index)] = row
+        row = [unit, errors_per_unit[unit]-len(forgiven_restarts)] + [len(lis) for n, lis in categories.items()] + [others]
+        categories_df.loc[len(categories_df.index)] = row
 
         restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number")]
         last_restarts = restarts[restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
@@ -167,24 +135,30 @@ def main():
                 restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, 
                                                                         restart_time.isoformat(), message]
 
-    with open("status_driving.txt", "w") as f:
-        print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        
+    categories_df = categories_df.sort_values(by=["Total"], ascending=False)
+    output_file = "status_cemex.txt"
+    with open(output_file, "w") as f:
+        print("CEMEX Concreto", file=f)
+        print(f'Hora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        
 
         print("\nUnidades con más de 10 errores en la última hora:", file=f)
         print(categories_df.to_string(index=False), file=f)
 
         print("\nUnidades con más de 1000 logs pendientes:", file=f)
-        print(critical[["Unidad", "Ultima_actualizacion", "Jsons_eventos_pendientes", 
+        print(df_devices[["Unidad", "Ultima_actualizacion", "Jsons_eventos_pendientes", 
                         "Jsons_status_pendientes"]].to_string(index=False), file=f)
         
         print("\nUnidades en ciclo de restart en los últimos 10 minutos:", file=f)
+
         if restarting_units.empty:
             print("No hay unidades con restarts", file=f)
         else:
             print(restarting_units.to_string(index=False), file=f)
-        print("\n"*3)
+            
+        print("\n"*3, file=f)
 
-        print(f'\nHora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}') 
+    print(f'Status mandado a {output_file}')
+    print(f'Hora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n') 
 
 
     with open("./output/driving_logs.json", "w") as file:
