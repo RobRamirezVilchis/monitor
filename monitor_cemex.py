@@ -59,27 +59,30 @@ def main():
     df_logs = pd.DataFrame(logs)
     df_devices = pd.DataFrame(devices)
 
-    df_logs["Timestamp"] = df_logs["Timestamp"].apply(lambda x: datetime.fromisoformat(x))
-    df_logs["Fecha_subida"] = df_logs["Fecha_subida"].apply(lambda x: datetime.fromisoformat(x))
+
+    errors_per_unit = pd.Series([])
+    if not df_logs.empty:
+        df_logs["Timestamp"] = df_logs["Timestamp"].apply(lambda x: datetime.fromisoformat(x))
+        df_logs["Fecha_subida"] = df_logs["Fecha_subida"].apply(lambda x: datetime.fromisoformat(x))
     
 
-    logs_no_dropping = df_logs.loc[df_logs["Log"].str.contains("Batch dropping").apply(lambda x: not x)]
+        logs_no_dropping = df_logs.loc[df_logs["Log"].str.contains("Batch dropping").apply(lambda x: not x)]
 
-    aux = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Aux"]
-    ignitions = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Ignición"]
+        aux = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Aux"]
+        ignitions = logs_no_dropping.loc[logs_no_dropping["Tipo"] == "Ignición"]
 
-    logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Tipo"] != "Aux") & 
-                                            (logs_no_dropping["Tipo"] != "Ignición")]
+        logs_no_dropping = logs_no_dropping.loc[(logs_no_dropping["Tipo"] != "Aux") & 
+                                                (logs_no_dropping["Tipo"] != "Ignición")]
 
 
-    errors_per_unit = logs_no_dropping["Unidad"].value_counts()
+        errors_per_unit = logs_no_dropping["Unidad"].value_counts()
+
 
     categories_df = pd.DataFrame(columns=["Unidad", "Total", "Restarts", 
                                           "Start/Reboot/Val", "SourceIDs", "Camera connection", 
                                           "Partition/Storage", "Forced/Read only", "Others"])
     
     restarting_units = pd.DataFrame(columns=["Unidad", "Restarts", "Último restart", "Mensaje"])
-
 
     for unit in df_devices["Unidad"]:
         if unit not in errors_per_unit.index:
