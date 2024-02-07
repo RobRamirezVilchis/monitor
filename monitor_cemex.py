@@ -60,7 +60,7 @@ def main():
     df_devices = pd.DataFrame(devices)
 
 
-    errors_per_unit = pd.Series([])
+    errors_per_unit = pd.Series([], dtype='object')
     if not df_logs.empty:
         df_logs["Timestamp"] = df_logs["Timestamp"].apply(lambda x: datetime.fromisoformat(x))
         df_logs["Fecha_subida"] = df_logs["Fecha_subida"].apply(lambda x: datetime.fromisoformat(x))
