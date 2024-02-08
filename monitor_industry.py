@@ -95,6 +95,7 @@ def main():
                     delay = str((prev_time_gap - timedelta(minutes=10))).split('.')[0]
                     print(f'{client_names[client]} {device} se atrasó por {delay}')
                     delay_found = True
+                    
                     # Si el delay no está registrado aún, registrarlo
                     if recent_delays[client] == [] or recent_delays[client][-1] != penul_register_time.isoformat(timespec='minutes'):
                         recent_delays[client].append(penul_register_time.isoformat(timespec='minutes'))
