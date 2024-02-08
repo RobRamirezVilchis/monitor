@@ -158,7 +158,7 @@ def main():
         else:
             print(restarting_units.to_string(index=False), file=f)
             
-        print("\n"*2, file=f)
+        print("\n", file=f)
 
     print(f'Status mandado a {output_file}')
     print(f'Hora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n') 
