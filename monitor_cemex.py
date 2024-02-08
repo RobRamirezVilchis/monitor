@@ -144,7 +144,7 @@ def main():
         print("CEMEX Concreto", file=f)
         print(f'Hora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        
 
-        print("\nUnidades con más de 10 errores en la última hora:", file=f)
+        print("\nLogs de unidades en la última hora:", file=f)
         print(categories_df.to_string(index=False), file=f)
 
         print("\nUnidades con más de 1000 logs pendientes:", file=f)
