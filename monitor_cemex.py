@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 import requests
 import json
 import pandas as pd
@@ -9,11 +10,14 @@ import time
 def login():
     global token
 
+    load_dotenv()
+    data={
+        'username': os.environ.get("CEMEX_USERNAME"),
+        'password': os.environ.get("CEMEX_PASSWORD")
+    }
+
     r = requests.post('https://cmx.safe-d.aivat.io/login/',
-                    data={
-                        'username': 'arturo_admin',
-                        'password': 'introid150325'
-                    })
+                    data=data)
     
     
     if r.status_code == 200 or r.status_code == 201:
