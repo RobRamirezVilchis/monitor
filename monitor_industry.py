@@ -5,12 +5,13 @@ import json
 import time
 from datetime import datetime, timedelta
 
-clients = ["trm", "rgs", "bkrt"]
 client_names = {
     "trm": "Ternium",
     "rgs": "Ragasa",
-    "bkrt": "Bekaert"
+    "bkrt": "Bekaert",
+    "cmxrgn": "CEMEX Regenera"
 }
+clients = list(client_names.keys())
 
 
 def get_credentials(clients):
@@ -73,6 +74,7 @@ def main():
 
 
             for device, logs in response.items():
+                restart_time = False
                 last_register_time = datetime.fromisoformat(logs[0]["register_time"][:-1])
                 penul_register_time = datetime.fromisoformat(logs[1]["register_time"][:-1])
                 time_since_log = datetime.now() - (last_register_time - timedelta(hours=6))
@@ -98,14 +100,16 @@ def main():
                     
                     # Si el delay no está registrado aún, registrarlo
                     if recent_delays[client] == [] or recent_delays[client][-1] != penul_register_time.isoformat(timespec='minutes'):
-                        recent_delays[client].append(penul_register_time.isoformat(timespec='minutes'))
-                        
-                        
+                        recent_delays[client].append(penul_register_time.isoformat(timespec='minutes'))                          
 
                                 
                 log = logs[0]["log"]
                 if not log == "":
-                    logs_to_print.append(f"{client_names[client]} {device} log: {log}")
+                    if log.startswith("Restarting pipeline"):
+                        restart_time = logs[0]["log_time"]
+                        logs_to_print.append(f"{client_names[client]} {device} log: {log}")
+                    elif log == "PIPE_RESTARTING" and logs[0]["log_time"] == restart_time:
+                        logs_to_print.append(f"{client_names[client]} {device} log: {log}")
             
             recent_delays[client] = [r for r in recent_delays[client] 
                                      if (datetime.now() - datetime.fromisoformat(r)) < timedelta(hours=24)]
@@ -117,14 +121,14 @@ def main():
                 print(f'{client_names[client]} sin retrasos ({len(recent_delays[client])} en las últimas 24h)')
 
         if not logs_to_print == []:
-            print("\n")
+            print('\n')
             for l in logs_to_print:
                 print(l)
 
         with open("./output/industry_logs.json", "w") as file:
             json.dump(all_responses, file, ensure_ascii=False)
 
-        print("\n")
+        print('\n\n')
         time.sleep(600)
 
 

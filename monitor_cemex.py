@@ -151,7 +151,7 @@ def main():
         print("\nLogs de unidades en la última hora:", file=f)
         print(categories_df.to_string(index=False), file=f)
 
-        print("\nUnidades con más de 1000 logs pendientes:", file=f)
+        print("\nLogs de eventos y status pendientes:", file=f)
         print(df_devices[["Unidad", "Ultima_actualizacion", "Jsons_eventos_pendientes", 
                         "Jsons_status_pendientes"]].to_string(index=False), file=f)
         
