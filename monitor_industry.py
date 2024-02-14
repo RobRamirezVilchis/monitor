@@ -26,7 +26,7 @@ def get_credentials(clients):
     return credentials
     
 
-def get_data(client, credentials, hours=1, minutes=0):
+def get_data(client, credentials, hours=12, minutes=0):
     login_url = f'https://{client}.industry.aivat.io/login/'
     status_url = f'https://{client}.industry.aivat.io/stats_json/'
     
@@ -75,12 +75,20 @@ def main():
 
             for device, logs in response.items():
                 restart_time = False
+                if logs == []:
+                    print(f'{client_names[client]} {device} atrasado por más de una hora')
+                    continue
+
                 last_register_time = datetime.fromisoformat(logs[0]["register_time"][:-1])
-                penul_register_time = datetime.fromisoformat(logs[1]["register_time"][:-1])
+                try:
+                    penul_register_time = datetime.fromisoformat(logs[1]["register_time"][:-1])
+                except IndexError: # Si sólo hubo un log en la última hora, tomar el tiempo del penúltimo como hace una hora
+                    penul_register_time = datetime.now() - timedelta(hours=1)
+
                 time_since_log = datetime.now() - (last_register_time - timedelta(hours=6))
                 prev_time_gap = last_register_time - penul_register_time
 
-                # Si hay un restraso ahorita
+                # Si hay un restraso en este momento
                 if time_since_log > timedelta(minutes=11):
                     delay = str(time_since_log-timedelta(minutes=10)).split('.')[0]
                     print(f'{client_names[client]} {device} atrasado por {delay}')
@@ -106,10 +114,8 @@ def main():
                 log = logs[0]["log"]
                 if not log == "":
                     if log.startswith("Restarting pipeline"):
-                        restart_time = logs[0]["log_time"]
                         logs_to_print.append(f"{client_names[client]} {device} log: {log}")
-                    elif log == "PIPE_RESTARTING" and logs[0]["log_time"] == restart_time:
-                        logs_to_print.append(f"{client_names[client]} {device} log: {log}")
+            
             
             recent_delays[client] = [r for r in recent_delays[client] 
                                      if (datetime.now() - datetime.fromisoformat(r)) < timedelta(hours=24)]
