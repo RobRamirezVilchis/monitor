@@ -26,7 +26,7 @@ def get_credentials(clients):
     return credentials
     
 
-def get_data(client, credentials, hours=12, minutes=0):
+def get_data(client, credentials, hours=1, minutes=0):
     login_url = f'https://{client}.industry.aivat.io/login/'
     status_url = f'https://{client}.industry.aivat.io/stats_json/'
     
@@ -116,7 +116,7 @@ def main():
                     if log.startswith("Restarting pipeline"):
                         logs_to_print.append(f"{client_names[client]} {device} log: {log}")
             
-            
+
             recent_delays[client] = [r for r in recent_delays[client] 
                                      if (datetime.now() - datetime.fromisoformat(r)) < timedelta(hours=24)]
 
