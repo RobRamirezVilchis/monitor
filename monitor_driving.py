@@ -132,7 +132,7 @@ def main():
             "source_ids": unit_logs["Tipo"] == "source_missing",
             "camera_connection": unit_logs["Tipo"] == "camera_missing",
             "partition": unit_logs["Tipo"] == "storage_devices",
-            "forced": unit_logs["Tipo"].isin(["forced_reboot", "read_only_sdd"]),
+            "forced": unit_logs["Tipo"].isin(["forced_reboot", "read_only_ssd"]),
         }
 
         categories = {key: unit_logs[condition] for key, condition in conditions.items()}

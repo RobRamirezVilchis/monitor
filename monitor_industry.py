@@ -26,7 +26,7 @@ def get_credentials(clients):
     return credentials
     
 
-def get_data(client, credentials, hours=24, minutes=0):
+def get_data(client, credentials, hours=1, minutes=0):
     login_url = f'https://{client}.industry.aivat.io/login/'
     status_url = f'https://{client}.industry.aivat.io/stats_json/'
     
