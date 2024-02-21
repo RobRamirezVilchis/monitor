@@ -158,7 +158,7 @@ def main():
             row = [unit, units_most_errors[unit]-len(forgiven_restarts)] + [len(lis) for n, lis in categories.items()] + [others]
             categories_df.loc[len(categories_df.index)] = row
 
-        categories_df["forced"] = categories_df["forced"] * 10
+        categories_df.loc["Forced/Read only"] = categories_df["Forced/Read only"] * 10
 
         restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number")]
         last_restarts = restarts[restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
