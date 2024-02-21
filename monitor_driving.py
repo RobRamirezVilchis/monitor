@@ -149,7 +149,7 @@ def main():
 
         # Descartar restarts en el intervalo de 5 minutos
         categories["restarts"] = categories["restarts"].drop(forgiven_restarts)
-
+        categories["forced"] = categories["forced"] * 10
 
         sum_categories = sum([len(lis) for n, lis in categories.items()])
         others = len(unit_logs) - sum_categories - len(forgiven_restarts)
@@ -175,7 +175,7 @@ def main():
         print("Transpais", file=f)
         print(f'Hora: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', file=f)        
 
-        print("\nUnidades con más de 10 errores en la última hora:", file=f)
+        print("\nUnidades con más de 10 errores en la última hora: (forced/read_only está escalado por 10)", file=f)
         print(categories_df.to_string(index=False), file=f)
 
         print("\nUnidades con más de 1000 logs pendientes:", file=f)
