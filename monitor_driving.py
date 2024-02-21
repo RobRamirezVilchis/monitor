@@ -149,7 +149,7 @@ def main():
 
         # Descartar restarts en el intervalo de 5 minutos
         categories["restarts"] = categories["restarts"].drop(forgiven_restarts)
-        categories["forced"] = categories["forced"] * 10
+        
 
         sum_categories = sum([len(lis) for n, lis in categories.items()])
         others = len(unit_logs) - sum_categories - len(forgiven_restarts)
@@ -157,6 +157,8 @@ def main():
         if errors_per_unit[unit] > 10:
             row = [unit, units_most_errors[unit]-len(forgiven_restarts)] + [len(lis) for n, lis in categories.items()] + [others]
             categories_df.loc[len(categories_df.index)] = row
+
+        categories_df["forced"] = categories_df["forced"] * 10
 
         restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number")]
         last_restarts = restarts[restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
