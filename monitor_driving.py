@@ -158,7 +158,6 @@ def main():
             row = [unit, units_most_errors[unit]-len(forgiven_restarts)] + [len(lis) for n, lis in categories.items()] + [others]
             categories_df.loc[len(categories_df.index)] = row
 
-        categories_df["Forced/Read only"] = categories_df["Forced/Read only"] * 10
 
         restarts = unit_logs.loc[unit_logs["Log"].str.contains("Restarting. Execution number")]
         last_restarts = restarts[restarts["Timestamp"] > (datetime.now() - timedelta(minutes=10))]
@@ -171,7 +170,7 @@ def main():
                 message = last_restarts.iloc[-1]["Log"].split("\\n\\n")[-1].split("\\n")[0].strip()
                 restarting_units.loc[len(restarting_units.index)] = [unit, execution_number, 
                                                                         restart_time.isoformat(), message]
-
+    categories_df["Forced/Read only"] = categories_df["Forced/Read only"] * 10
     output_file = "status_driving.txt"
     with open(output_file, "w") as f:
         print("Transpais", file=f)
